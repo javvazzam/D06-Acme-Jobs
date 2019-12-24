@@ -1,0 +1,38 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.challenge.form.label.title = Title:
+administrator.challenge.form.label.deadline = Deadline:
+administrator.challenge.form.label.description = Description:
+administrator.challenge.form.label.bronzeGoal = Goal:
+administrator.challenge.form.label.bronzeReward = Reward:
+administrator.challenge.form.label.silverGoal = Goal:
+administrator.challenge.form.label.silverReward = Reward:
+administrator.challenge.form.label.goldGoal = Goal:
+administrator.challenge.form.label.goldReward = Reward:
+administrator.challenge.form.button.create = Create
+administrator.challenge.form.button.update = Update
+administrator.challenge.form.button.delete = Delete
+administrator.challenge.form.button.return = Return
+
+administrator.challenge.form.label.bronzeLevel = Bronze level
+administrator.challenge.form.label.silverLevel = Silver level
+administrator.challenge.form.label.goldLevel = Gold level
+
+administrator.challenge.list.label.title = Title
+administrator.challenge.list.label.deadline = Deadline
+administrator.challenge.gold-greater-silver = Gold reward must be higher than silver
+administrator.challenge.silver-greater-bronze = Silver reward must be higher than bronze
+
+administrator.challenge.incorrect-date = Deadline is set before actual date
+administrator.challenge.incorrect-currency = Currency must be EUR
+administrator.challenge.must-be-filled = Must be filled
+
+administrator.challenge.must-be-filled-accordingly = Must be filled accordingly to money pattern 

@@ -1,0 +1,166 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+# master.banner.welcome #######################################################
+
+master.banner.background = #FFE97F 
+
+# master.welcome ##############################################################
+master.welcome.title = Welcome!
+master.welcome.text = \
+	Welcome to Acme Jobs! Never before has it bee easier to get your \
+	project up and running!
+
+# master.menu #################################################################
+master.menu.home = Home
+master.menu.sign-up = Sign up
+master.menu.sign-in = Sign in
+master.menu.sign-out = Sign out
+
+# master.menu.selector #######################################################
+master.menu.selector.anonymous = Anonymous's Selector
+master.menu.selector.authenticated = Authenticated's Selector 
+master.menu.selector.administrator = Administrator's Selector
+master.menu.selector.consumer = Consumer's Selector
+master.menu.selector.provider = Provider's Selector
+master.menu.selector.employer = Employer's Selector
+master.menu.selector.worker = Worker's Selector
+master.menu.selector.auditor = Auditor's Selector
+master.menu.selector.sponsor = Sponsor's Selector
+
+# master.menu.anonymous #######################################################
+master.menu.anonymous = Anonymous
+master.menu.anonymous.favourite-link = Favourite link
+master.menu.anonymous.juanogtir-favourite-link = juanogtir's favourite link
+master.menu.anonymous.edubotdom-favourite-link = edubotdom's favourite link
+master.menu.anonymous.javvazzam-favourite-link = javvazzam's favourite link
+master.menu.anonymous.danaremar-favourite-link = danaremar's favourite link
+master.menu.anonymous.seraguoro-favourite-link = seraguoro's favourite link
+
+master.menu.anonymous.announcements = Announcements
+master.menu.anonymous.companies = Company records
+master.menu.anonymous.investor = Investor records
+master.menu.anonymous.top_companies = Top company records
+master.menu.anonymous.top_investors = Top investor records
+
+# master.menu.auditor #######################################################
+master.menu.auditor.audit.list_mine = List of audited jobs
+master.menu.auditor.audit.list_not_mine = List of not audited jobs
+
+# master.menu.authenticated ###################################################
+master.menu.authenticated.offer = Offers
+master.menu.authenticated.solicitud = Requests
+master.menu.authenticated.announcements = Announcements
+master.menu.authenticated.challenge = List challenges
+master.menu.authenticated.companies = Company records
+master.menu.authenticated.investor = Investor records
+master.menu.authenticated.jobs = Jobs
+master.menu.authenticated.threads.list_mine = List my threads
+master.menu.authenticated.threads.create = Create a thread
+
+# master.menu.administrator ###################################################
+master.menu.administrator = Administrator
+master.menu.administrator.list_announcements = List admin announcements
+master.menu.administrator.create_announcements = Create an admin announcements
+master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.shutdown = Shut down
+master.menu.administrator.customization = Customization
+master.menu.administrator.dashboard = Dashboard panel
+master.menu.administrator.indicators = Indicators panel
+master.menu.administrator.list_challenge = List challenges
+master.menu.administrator.create_challenge = Create a challenge
+master.menu.administrator.charts = Administration charts
+master.menu.administrator.list_companies = List company records
+master.menu.administrator.create_companies = Create a company records
+master.menu.administrator.list_investor = List investor records
+master.menu.administrator.create_investor = Create a investor records
+master.menu.administrator.list_commercialBanner = List commercial banner 
+master.menu.administrator.create_commercialBanner = Create commercial banner
+master.menu.administrator.list_nonCommercialBanner = List non-commercial banner 
+master.menu.administrator.create_nonCommercialBanner = Create non-commercial banner
+master.menu.administrator.list_auditor_request = List auditors' request
+
+# master.menu.provider #######################################################
+master.menu.provider = Provider
+master.menu.provider.favourite-link = Favourite link
+master.menu.provider.list_solicitud = List Requests
+master.menu.provider.create_solicitud = Create a request
+
+# master.menu.consumer #######################################################
+master.menu.consumer = Consumer
+master.menu.consumer.favourite-link = Favourite link
+master.menu.consumer.create_offer = Create an offer
+
+# master.menu.employer ########################################################
+master.menu.employer.job.list_mine = List my jobs
+master.menu.employer.application.list_mine = List applications
+master.menu.employer.application.list_mine_reference = List applications grouped by reference
+master.menu.employer.application.list_mine_status = List applications grouped by status
+master.menu.employer.application.list_mine_moment = List applications grouped by moment
+master.menu.employer.job.create_job = Create jobs
+
+# master.menu.worker ##########################################################
+master.menu.worker.application.list_mine = List my applications
+master.menu.worker.job.list = List jobs
+
+# master.menu.sponsor #########################################################
+master.menu.sponsor.comercial_banner.create = Create Commercial Banner
+master.menu.sponsor.comercial_banner.list_mine = List my Commercial Banners
+master.menu.sponsor.non_comercial_banner.create = Create Non Commercial Banner
+master.menu.sponsor.non_comercial_banner.list_mine = List my Non Commercial Baners
+
+# master.menu.user-account ####################################################
+master.menu.user-account = Account
+master.menu.user-account.general-data = General data
+master.menu.user-account.provider = Provider data
+master.menu.user-account.become-provider = Become a provider
+master.menu.user-account.consumer = Consumer data
+master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.employer = Employer data
+master.menu.user-account.become-employer = Become an employer
+master.menu.user-account.worker = Worker data
+master.menu.user-account.become-worker = Become a worker
+master.menu.user-account.become-sponsor = Become a sponsor
+master.menu.user-account.sponsor = Sponsor data
+master.menu.user-account.become-auditor = Become an auditor
+master.menu.user-account.auditor = Auditor data
+
+# master.footer ###############################################################
+master.footer.title.about = About us
+master.footer.label.company = Company
+master.footer.label.license = License
+master.footer.title.social = Social
+master.footer.label.linked-in = Linked-In
+master.footer.label.twitter = Twitter
+master.footer.title.languages = Languages
+master.footer.label.english = English
+master.footer.label.spanish = Spanish
+
+# master.company ##############################################################
+master.company.title = La compañía
+master.company.text = \
+	Acme Jobs, Inc. is a fictitious fictitious company that provides a \
+	starter project for the students of the Design and Testing subject of the \
+	Software Engineering Curriculum of the University of Sevilla.
+master.company.name = Acme Jobs, Inc.
+master.company.address = Number Street, City, State, Country
+master.company.phone = +000 123 456
+master.company.email = contact@acme.com
+
+# master.license ##############################################################
+master.license.title = License
+master.license.text = \
+	You may use this system free of charge, as long as you carefully observe the \
+	existing applicable laws.  Please, note that we do not share any information \
+	about you with any other company.  We only use three cookies, namely: \
+	"JSESSIONID" to identify your work session, "remember" to let you authenticate \
+	automatically for a maximum of 31 days, and "language" to store your language \
+	preferences. Additionally, we store an item called "returnStack" in your browser's \
+	local storage to keep track of the document to which some buttons must return.

@@ -1,0 +1,30 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.thread.form.label.messages.author = Author:
+authenticated.thread.form.label.title = Title:
+authenticated.thread.form.label.creationDate = Creation date:
+authenticated.thread.form.label.messages = Messages
+authenticated.thread.form.label.messages.title = Message title:
+authenticated.thread.form.label.messages.tags = Message tags:
+authenticated.thread.form.label.messages.body = Message body:
+authenticated.thread.form.label.messages.moment = Message's moment of publication:
+
+authenticated.thread.form.button.return = Return
+authenticated.thread.form.button.create = Create thread
+authenticated.thread.form.button.messageList = List messages
+authenticated.thread.form.button.message.create = Create message
+authenticated.thread.form.button.message.listarUsuario = List thread users
+authenticated.thread.form.button.message.anadirUsuario = Add user to this thread
+
+authenticated.thread.list.label.title = Title
+authenticated.thread.list.label.creationDate = Creation date
+
+authenticated.thread.spamWords = Do not write spam words

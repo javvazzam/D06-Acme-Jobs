@@ -1,0 +1,22 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+employer.audit.list.label.title = Título
+employer.audit.list.label.moment = Fecha
+
+employer.audit.form.label.title = Título
+employer.audit.form.label.status = Estado
+employer.audit.form.label.moment = Fecha
+employer.audit.form.label.body = Cuerpo
+employer.audit.form.label.job = Trabajo
+employer.audit.form.label.auditor = Auditor
+employer.audit.form.label.associatedJob = Trabajo auditado
+
+employer.job.form.button.return = Volver

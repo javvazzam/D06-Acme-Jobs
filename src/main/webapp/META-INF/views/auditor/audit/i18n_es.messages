@@ -1,0 +1,30 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+auditor.audit.list.label.title = Título
+auditor.audit.list.label.moment = Fecha
+
+auditor.audit.form.label.title = Título
+auditor.audit.form.label.status = Status
+auditor.audit.form.label.status1 = Publicado
+auditor.audit.form.label.status0 = Borrador
+auditor.audit.form.label.moment = Fecha
+auditor.audit.form.label.body = Cuerpo
+auditor.audit.form.label.job = Trabajo
+auditor.audit.form.label.auditor = Auditor
+auditor.audit.form.label.associatedJob = Trabajo auditado
+
+auditor.audit.form.label.status.checkbox = Publicado
+
+auditor.audit.form.button.create = Crear
+auditor.audit.form.button.update = Actualizar
+auditor.audit.form.button.return = Volver
+
+auditor.job.audit.statusNotCorrect = El Estado de la audición puede ser solo "Published" o "Draft"

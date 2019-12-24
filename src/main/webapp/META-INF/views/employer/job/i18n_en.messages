@@ -1,0 +1,43 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+employer.job.form.label.referenceNumber = Reference:
+employer.job.form.label.status = Status:
+employer.job.form.label.status1 = Published
+employer.job.form.label.status0 = Draft
+employer.job.form.label.title = Title:
+employer.job.form.label.deadline = Deadline:
+employer.job.form.label.description = Description:
+employer.job.form.label.salary = Salary:
+employer.job.form.label.moreInfo = More information:
+employer.job.form.label.description = Description:
+
+employer.job.form.button.auditList = Audit list
+employer.job.form.button.duties = Duties
+employer.job.form.button.createDuties = Create duties
+
+employer.job.form.button.create = Create
+employer.job.form.button.update = Update
+employer.job.form.button.delete = Delete
+employer.job.form.button.return = Return
+
+employer.job.list.label.referenceNumber = Reference
+employer.job.list.label.title = Title
+employer.job.list.label.deadline = Deadline
+
+employer.job.spamWords = Do not write spam words
+employer.job.tryingToCreatePastJob = The job is in past
+employer.job.isAlreadyPublished = The job is already published, it cannot be modified
+employer.job.aWorkerHasAppliedForIt = A worker has applied for this job; that means it cannot be deleted by the way
+employer.job.dutiesNotSumUp = Duties do not sum up 100%, that is why this job cannot be published
+employer.job.statusNotCorrect = Status can only be "Published" or "Draft"
+employer.job.descriptorIsEmpty = The descriptor may not be empty if u want to publish this job
+employer.job.statusMustBeDraft = The status has to be draft once a job is created
+

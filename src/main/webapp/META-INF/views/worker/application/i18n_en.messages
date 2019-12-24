@@ -1,0 +1,31 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+worker.application.list.label.reference = Reference Number
+worker.application.list.label.moment = Moment
+worker.application.list.label.status = Status
+
+worker.application.form.label.JobEmployer = Job employer
+worker.application.form.label.referenceJob = Job reference
+worker.application.form.label.reference = Reference Number
+worker.application.form.label.moment = Moment
+worker.application.form.label.status = Status
+worker.application.form.label.justification = Justification
+worker.application.form.label.status.pending = Pending
+worker.application.form.label.status.rejected = Rejected
+worker.application.form.label.status.accepted = Accepted
+worker.application.form.label.statement = Statement
+worker.application.form.label.skills = Skills
+worker.application.form.label.qualifications = Qualifications
+worker.application.form.button.return = Return
+worker.job.form.button.application.create = Create Application
+worker.application.form.button.create = Create Application
+worker.application.tryingToApplyPastJob = You cannot create an application for a job unavailable.
+worker.application.tryingToApplyNotPublished = You cannot create an application for a job unavailable.

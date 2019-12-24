@@ -1,0 +1,45 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+#administrator.announcement.form.label.title = Title:
+
+administrator.dashboard.form.label.listdashboard = List dashboard
+
+administrator.dashboard.form.label.averageJobsPerEmployer = Average of jobs per employer:
+administrator.dashboard.form.label.averageApplicationsPerEmployer = Average applications per employer:
+administrator.dashboard.form.label.averageApplicationsPerWorker = Average applications per worker:
+
+administrator.dashboard.form.label.chart1 = Chart of Jobs
+administrator.dashboard.form.label.chart2 = Chart of Application ratios
+administrator.dashboard.form.label.chart3 = Chart of Application time series
+
+administrator.dashboard.form.button.return = Return
+
+administrator.dashboard.form.label.rewardInformation = Information about rewards
+administrator.dashboard.form.label.offerInformation = Information about offers
+
+administrator.dashboard.form.label.totalNumberOfAnnouncements = Total number of announcements:
+administrator.dashboard.form.label.totalNumberOfCompanyRecords = Total number of company records:
+administrator.dashboard.form.label.totalNumberOfInvestorRecords = Total number of investor records: 
+
+administrator.dashboard.form.label.minimumReward = Minimum reward:
+administrator.dashboard.form.label.maximumReward = Maximum reward:
+administrator.dashboard.form.label.averageReward = Average reward:
+administrator.dashboard.form.label.standardDesviationReward = Standard desviation reward:
+
+administrator.dashboard.form.label.minimumOffer = Minimum offer:
+administrator.dashboard.form.label.maximumOffer = Maximum offer:
+administrator.dashboard.form.label.averageOffer = Average offer:
+administrator.dashboard.form.label.standardDesviationOffer = Standard desviation offer:
+
+administrator.dashboard.form.label.chartTitle = Companys/Inversors per sector
+
+
+administrator.dashboard.form.button.return = Return

@@ -1,0 +1,39 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+employer.job.form.label.referenceNumber = Referencia:
+employer.job.form.label.status = Estado:
+employer.job.form.label.title = Titulo:
+employer.job.form.label.deadline = Fecha límite:
+employer.job.form.label.description = Descripción:
+employer.job.form.label.salary = Salario:
+employer.job.form.label.moreInfo = Más información:
+employer.job.form.label.description = Descripción:
+employer.job.form.button.auditList = Lista de audiciones
+employer.job.form.button.duties = Labores
+employer.job.form.button.createDuties = Crear labores
+
+employer.job.form.button.create = Crear
+employer.job.form.button.delete = Eliminar
+employer.job.form.button.update = Actualizar
+employer.job.form.button.return = Volver
+
+employer.job.list.label.referenceNumber = Referencia
+employer.job.list.label.title = Título
+employer.job.list.label.deadline = Fecha límite
+
+employer.job.spamWords = No puede introducir palabras inapropiadas
+employer.job.tryingToCreatePastJob = No se puede crear un trabajo pasado
+employer.job.isAlreadyPublished = El job ya está publicado, y por lo tanto, no puede ser modificado
+employer.job.aWorkerHasAppliedForIt = Un trabajador ha aplicado por este trabajo, por lo tanto no puede ser eliminado
+employer.job.dutiesNotSumUp = Las labores no suman el 100%, por lo tanto el trabajo no puede ser publicado
+employer.job.statusNotCorrect = El estado sólo puede ser "Published" o "Draft"
+employer.job.descriptorIsEmpty = El descriptor no puede ser vacío si se quiere publicar el trabajo
+employer.job.statusMustBeDraft = El job no puede ser publicado directamente cuando se crea

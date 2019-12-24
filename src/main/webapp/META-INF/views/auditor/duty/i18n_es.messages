@@ -1,0 +1,20 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+auditor.duty.form.label.title = Título:
+auditor.duty.form.label.description = Descripción:
+auditor.duty.form.label.timeAmount = Cantidad de tiempo:
+
+
+auditor.duty.list.label.title = Título
+auditor.duty.list.label.timeAmount = Cantidad de tiempo
+
+auditor.duty.form.button.return = Volver
+

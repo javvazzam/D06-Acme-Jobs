@@ -1,0 +1,33 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+employer.application.list.label.reference = Número de Referencia
+employer.application.list.label.moment = Momento
+employer.application.list.label.status = Estado
+
+employer.application.form.label.JobEmployer = Empleador del trabajo
+employer.application.form.label.referenceJob = Trabajo correspondiente
+employer.application.form.label.reference = Número de Referencia
+employer.application.form.label.moment = Momento
+employer.application.form.label.status = Estado
+employer.application.form.label.justification = Justificación
+employer.application.form.label.statement = Declaración
+employer.application.form.label.skills = Habilidades
+employer.application.form.label.qualifications = Cualificaciones
+
+employer.application.form.button.update = Actualizar
+employer.application.form.button.return = Regresar
+
+employer.application.form.label.status.accepted = Actualizar
+employer.application.form.label.status.rejected = Rechazar
+employer.application.form.label.status.pending = Pendiente
+
+employer.application.spamWords = No puede introducir palabras inapropiadas
+employer.application.justificationIfRejected = Si es rechazado, debe proveer una justificación

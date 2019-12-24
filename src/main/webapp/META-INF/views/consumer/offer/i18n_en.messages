@@ -1,0 +1,28 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+consumer.offer.form.label.ticker = Ticker:
+consumer.offer.form.label.title = Title:
+consumer.offer.form.label.moment = Moment:
+consumer.offer.form.label.deadline = Deadline:
+consumer.offer.form.label.text = Description:
+consumer.offer.form.label.min = Minimum reward:
+consumer.offer.form.label.max = Maximum reward:
+consumer.offer.form.button.create = Create
+consumer.offer.form.button.return = Return
+consumer.offer.form.label.accept = Confirm
+consumer.offer.must-accept = Must be confirmed
+consumer.offer.must-be-different-ticker = Must not match any other previous ticker
+consumer.offer.must-be-future= Offer's deadline must be in the future
+consumer.offer.correct-range = Range minimum is greater than the maximum
+consumer.offer.correct-currency = Currency is not EUR
+consumer.offer.negative-reward = Reward cannot be negative
+consumer.offer.must-be-filled = Must be filled
+consumer.offer.must-be-filled-accordingly = Must be filled accordingly to a money pattern

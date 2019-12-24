@@ -1,0 +1,26 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+employer.duty.form.label.title = Title:
+employer.duty.form.label.description = Description:
+employer.duty.form.label.timeAmount = Time amount:
+
+employer.duty.list.label.title = Title
+employer.duty.list.label.timeAmount = Time Amount
+employer.duty.list.button.return = Return
+
+employer.duty.form.button.update = Update
+employer.duty.form.button.delete = Delete
+employer.job.form.button.return = Return
+employer.duty.form.button.create = Create duty
+
+employer.duty.cannotDeleteAll = Cannot delete all duties of the descriptor
+employer.duty.spamWords = Do not write spam words
+

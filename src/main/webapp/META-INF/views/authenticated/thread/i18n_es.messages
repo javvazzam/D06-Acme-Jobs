@@ -1,0 +1,30 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.thread.form.label.messages.author = Autor:
+authenticated.thread.form.label.title = Título:
+authenticated.thread.form.label.creationDate = Fecha de creación:
+authenticated.thread.form.label.messages = Mensajes
+authenticated.thread.form.label.messages.title = Título del mensaje:
+authenticated.thread.form.label.messages.tags = Etiquetas del mensaje:
+authenticated.thread.form.label.messages.body = Cuerpo del mensaje:
+authenticated.thread.form.label.messages.moment = Instante de publicación del mensaje:
+
+authenticated.thread.form.button.return = Volver
+authenticated.thread.form.button.create = Crear hilo
+authenticated.thread.form.button.messageList = Listar mensajes
+authenticated.thread.form.button.message.create = Crear mensaje
+authenticated.thread.form.button.message.listarUsuario = Listar usuarios del hilo
+authenticated.thread.form.button.message.anadirUsuario = Añadir usuarios al hilo
+
+authenticated.thread.list.label.title = Título
+authenticated.thread.list.label.creationDate = Creation date
+
+authenticated.thread.spamWords = No puede introducir palabras inapropiadas

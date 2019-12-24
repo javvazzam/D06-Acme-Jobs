@@ -1,0 +1,32 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+provider.solicitud.form.label.ticker = Ticker:
+provider.solicitud.form.label.title = Title:
+provider.solicitud.form.label.moment = Moment:
+provider.solicitud.form.label.deadline = Deadline:
+provider.solicitud.form.label.text = Description:
+provider.solicitud.form.label.reward = Reward:
+provider.solicitud.form.button.return = Return
+
+provider.solicitud.list.label.moment = Moment
+provider.solicitud.list.label.title = Title
+provider.solicitud.list.label.deadline = Deadline
+provider.solicitud.list.label.reward = Reward
+
+provider.solicitud.form.label.accept = Confirm
+provider.solicitud.form.button.create = Create
+provider.solicitud.must-be-different-ticker = Must not match any other previous ticker
+provider.solicitud.must-accept = Must be confirmed
+provider.solicitud.must-be-future = Must be in the future
+provider.solicitud.correct-currency = Currency must be EUR
+# provider.solicitud.negative-reward = Reward must be positive
+# provider.solicitud.must-be-filled = Must be filled
+# provider.solicitud.must-be-filled-accordingly = Must be filled accordingly to a money pattern

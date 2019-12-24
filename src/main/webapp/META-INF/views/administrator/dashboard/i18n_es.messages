@@ -1,0 +1,43 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.label.listdashboard = Listar indicadores
+
+administrator.dashboard.form.label.averageJobsPerEmployer = Media de trabajos por empleador
+administrator.dashboard.form.label.averageApplicationsPerEmployer = Media de aplicaciones por empleador
+administrator.dashboard.form.label.averageApplicationsPerWorker = Media de aplicaciones por trabajador
+
+administrator.dashboard.form.label.chart1 = Gráfica de Trabajos
+administrator.dashboard.form.label.chart2 = Gráfica de ratios de Aplicación
+administrator.dashboard.form.label.chart3 = Gráfica de series temporales de Aplicación
+
+administrator.dashboard.form.button.return = Volver
+
+administrator.dashboard.form.label.rewardInformation = Información sobre recompensas
+administrator.dashboard.form.label.offerInformation = Información sobre ofertas
+
+administrator.dashboard.form.label.totalNumberOfAnnouncements = Número de publicaciones:
+administrator.dashboard.form.label.totalNumberOfCompanyRecords = Número de compañías:
+administrator.dashboard.form.label.totalNumberOfInvestorRecords = Número de registros de inversiones;
+
+administrator.dashboard.form.label.minimumReward = Recompensa mínima:
+administrator.dashboard.form.label.maximumReward = Recompensa máxima:
+administrator.dashboard.form.label.averageReward = Media de recompensas:
+administrator.dashboard.form.label.standardDesviationReward = Desviación típica de recompensas:
+
+administrator.dashboard.form.label.minimumOffer = Oferta mínima:
+administrator.dashboard.form.label.maximumOffer = Oferta máxima:
+administrator.dashboard.form.label.averageOffer = Media de ofertas:
+administrator.dashboard.form.label.standardDesviationOffer = Desviación típica de ofertas:
+
+administrator.dashboard.form.label.chartTitle = Empresas/Inversores por sector
+
+
+administrator.dashboard.form.button.return = Volver

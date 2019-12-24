@@ -1,0 +1,23 @@
+.sec{
+	background:rgba(0,0,0,0.03);
+	border-radius:5px;
+	padding:10px;
+	margin-left:20px;
+}
+
+fieldset{
+	margin:40px 0;
+}
+/*
+.seccion{
+	background:rgba(0,0,0,0.03);
+	border-radius:5px;
+	padding:5px;
+}
+.seccion span{
+	font-weight: bold;
+    font-size: 18px;
+}
+.seccion div{
+	margin-left:10px;
+}*/

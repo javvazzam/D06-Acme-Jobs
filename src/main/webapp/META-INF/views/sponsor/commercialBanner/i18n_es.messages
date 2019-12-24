@@ -1,0 +1,24 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+sponsor.commercialBanner.form.label.picture = Imagen:
+sponsor.commercialBanner.form.label.slogan = Eslogan:
+sponsor.commercialBanner.form.label.url = Dirección:
+sponsor.commercialBanner.form.label.creditCard = Tarjeta de crédito:
+sponsor.commercialBanner.form.button.return = Volver
+sponsor.commercialBanner.form.button.create = Crear
+sponsor.commercialBanner.form.button.update = Actualizar
+sponsor.commercialBanner.form.button.delete = Eliminar
+
+sponsor.CommercialBanner.spamWords = No escriba palabras inapropiadas!!!
+sponsor.CommercialBanner.creditCardNotRegistered = Necesitas registrar la tarjeta de crédito en tu perfil de Patrocinador
+
+sponsor.commercialBanner.list.label.slogan = Eslogan:
+sponsor.commercialBanner.list.label.url = Dirección:

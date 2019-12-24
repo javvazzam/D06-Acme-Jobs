@@ -1,0 +1,27 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.job.form.label.referenceNumber = Referencia:
+authenticated.job.form.label.status = Estado:
+authenticated.job.form.label.title = Titulo:
+authenticated.job.form.label.deadline = Fecha límite:
+authenticated.job.form.label.description = Descripción:
+authenticated.job.form.label.salary = Salario:
+authenticated.job.form.label.moreInfo = Más información:
+authenticated.job.form.label.descriptor = Descriptor:
+authenticated.job.form.label.description = Descripción:
+
+authenticated.job.form.button.auditList = Lista de audiciones
+authenticated.job.form.button.duties = Labores
+authenticated.job.form.button.return = Volver
+
+authenticated.job.list.label.referenceNumber = Referencia
+authenticated.job.list.label.title = Título
+authenticated.job.list.label.deadline = Fecha límite
