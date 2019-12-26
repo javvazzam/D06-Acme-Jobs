@@ -18,12 +18,20 @@
 <link rel="stylesheet" href="libraries/acme/css/challenge.css" />
 
 <acme:form>
+
+	<acme:form-textarea code="authenticated.authorized.form.label.body" path="body" />
+
+	<jstl:if test="${command!='create'}">
+		<acme:form-textbox code="authenticated.authorized.form.label.status" path="status" />
+	</jstl:if>
+
+	<jstl:if test="${status=='Accepted'}">
+		<acme:form-return code="authenticated.auditor.form.button.create" action="/authenticated/auditor/create" />
+	</jstl:if>
+
+	<jstl:if test="${command=='create'}">
+		<acme:form-submit code="authenticated.authorized.form.button.create" action="/authenticated/authorized/create"/>
+	</jstl:if>
 	
-	<acme:form-textbox code="authenticated.auditor.form.label.firm" path="firm" />
-	<acme:form-textarea code="authenticated.auditor.form.label.statement" path="statement" />
-	
-	<acme:form-submit test="${command == 'create'}" code="authenticated.auditor.form.button.create" action="/authenticated/auditor/create"/>
-	<acme:form-submit test="${command == 'update'}" code="authenticated.auditor.form.button.update" action="/authenticated/auditor/update"/>
-	
-	<acme:form-return code="authenticated.auditor.form.button.return" />
+	<acme:form-return code="authenticated.authorized.form.button.return" />
 </acme:form>

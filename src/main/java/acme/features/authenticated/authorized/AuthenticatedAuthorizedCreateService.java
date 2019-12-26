@@ -1,5 +1,5 @@
 /*
- * AuthenticatedAuditorCreateService.java
+ * AuthenticatedAuthorizedCreateService.java
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -10,12 +10,11 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.auditor;
+package acme.features.authenticated.authorized;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.roles.Auditor;
 import acme.entities.roles.Authorized;
 import acme.framework.components.Errors;
 import acme.framework.components.HttpMethod;
@@ -29,44 +28,41 @@ import acme.framework.helpers.PrincipalHelper;
 import acme.framework.services.AbstractCreateService;
 
 @Service
-public class AuthenticatedAuditorCreateService implements AbstractCreateService<Authenticated, Auditor> {
+public class AuthenticatedAuthorizedCreateService implements AbstractCreateService<Authenticated, Authorized> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuthenticatedAuditorRepository repository;
+	private AuthenticatedAuthorizedRepository repository;
 
-	// AbstractCreateService<Authenticated, Auditor> ---------------------------
+	// AbstractCreateService<Authenticated, Authorized> ---------------------------
 
 
 	@Override
-	public boolean authorise(final Request<Auditor> request) {
+	public boolean authorise(final Request<Authorized> request) {
 		assert request != null;
 
-		Auditor result;
+		Authorized result;
 		Principal principal;
 		int userAccountId;
 
 		principal = request.getPrincipal();
 		userAccountId = principal.getAccountId();
 
-		Authorized authorize = this.repository.findOneAuthorizedByUserAccountId(userAccountId);
-		boolean authorized = authorize != null && authorize.isAccepted();
+		result = this.repository.findOneAuthorizedByUserAccountId(userAccountId);
 
-		result = this.repository.findOneAuditorByUserAccountId(userAccountId);
-
-		return result == null && authorized;
+		return result == null;
 	}
 
 	@Override
-	public void validate(final Request<Auditor> request, final Auditor entity, final Errors errors) {
+	public void validate(final Request<Authorized> request, final Authorized entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
 	}
 
 	@Override
-	public void bind(final Request<Auditor> request, final Auditor entity, final Errors errors) {
+	public void bind(final Request<Authorized> request, final Authorized entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -75,19 +71,25 @@ public class AuthenticatedAuditorCreateService implements AbstractCreateService<
 	}
 
 	@Override
-	public void unbind(final Request<Auditor> request, final Auditor entity, final Model model) {
+	public void unbind(final Request<Authorized> request, final Authorized entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "firm", "statement");
+		if (entity.isAccepted()) {
+			model.setAttribute("status", "Accepted");
+		} else {
+			model.setAttribute("status", "Pending");
+		}
+
+		request.unbind(entity, model, "body");
 	}
 
 	@Override
-	public Auditor instantiate(final Request<Auditor> request) {
+	public Authorized instantiate(final Request<Authorized> request) {
 		assert request != null;
 
-		Auditor result;
+		Authorized result;
 		Principal principal;
 		int userAccountId;
 		UserAccount userAccount;
@@ -96,14 +98,15 @@ public class AuthenticatedAuditorCreateService implements AbstractCreateService<
 		userAccountId = principal.getAccountId();
 		userAccount = this.repository.findOneUserAccountById(userAccountId);
 
-		result = new Auditor();
+		result = new Authorized();
+		result.setAccepted(false);
 		result.setUserAccount(userAccount);
 
 		return result;
 	}
 
 	@Override
-	public void create(final Request<Auditor> request, final Auditor entity) {
+	public void create(final Request<Authorized> request, final Authorized entity) {
 		assert request != null;
 		assert entity != null;
 
@@ -111,7 +114,7 @@ public class AuthenticatedAuditorCreateService implements AbstractCreateService<
 	}
 
 	@Override
-	public void onSuccess(final Request<Auditor> request, final Response<Auditor> response) {
+	public void onSuccess(final Request<Authorized> request, final Response<Authorized> response) {
 		assert request != null;
 		assert response != null;
 

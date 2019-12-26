@@ -31,6 +31,10 @@
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
 
+    alter table `authorized` 
+       drop 
+       foreign key FK_keqakltjauwrbk13pgunccany;
+
     alter table `banner` 
        drop 
        foreign key `FKjoxwdnjr54soq3j89kt3fgrtj`;
@@ -100,6 +104,8 @@
     drop table if exists `auditor`;
 
     drop table if exists `authenticated`;
+
+    drop table if exists `authorized`;
 
     drop table if exists `banner`;
 

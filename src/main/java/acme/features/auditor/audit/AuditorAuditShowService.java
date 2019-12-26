@@ -35,9 +35,7 @@ public class AuditorAuditShowService implements AbstractShowService<Auditor, Aud
 
 		boolean draftPrincipal = !audit.isFinalMode() && !audit.getAuditor().equals(auditor);
 
-		boolean autorize = auditor.isRequest();
-
-		return autorize && audit.getJob().isFinalMode() && !draftPrincipal;
+		return auditor != null && audit.getJob().isFinalMode() && !draftPrincipal;
 	}
 
 	@Override

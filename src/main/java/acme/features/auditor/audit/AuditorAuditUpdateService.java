@@ -33,9 +33,7 @@ public class AuditorAuditUpdateService implements AbstractUpdateService<Auditor,
 
 		Auditor auditor = this.repository.findOneAuditorByUserAccountId(auditorId);
 
-		boolean autorize = auditor.isRequest();
-
-		return autorize && audit.getJob().isFinalMode() && !audit.isFinalMode() && audit.getAuditor().equals(auditor);
+		return auditor != null && audit.getJob().isFinalMode() && !audit.isFinalMode() && audit.getAuditor().equals(auditor);
 	}
 
 	@Override

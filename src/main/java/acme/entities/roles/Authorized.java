@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Auditor extends UserRole {
+public class Authorized extends UserRole {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -19,11 +19,10 @@ public class Auditor extends UserRole {
 
 	// Attributes -------------------------------------------------------------
 
-	@NotBlank
-	private String				firm;
+	private boolean				accepted;
 
 	@NotBlank
-	private String				statement;
+	private String				body;
 
 	// Derived attributes -----------------------------------------------------
 

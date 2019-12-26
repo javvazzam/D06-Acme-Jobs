@@ -32,13 +32,7 @@ public class AuthenticatedAuditorShowService implements AbstractShowService<Auth
 		assert entity != null;
 		assert model != null;
 
-		if (entity.isRequest()) {
-			model.setAttribute("status", "Accepted");
-		} else {
-			model.setAttribute("status", "Pending");
-		}
-
-		request.unbind(entity, model, "firm", "statement", "body");
+		request.unbind(entity, model, "firm", "statement");
 	}
 
 	@Override

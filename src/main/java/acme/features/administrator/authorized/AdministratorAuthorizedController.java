@@ -1,5 +1,5 @@
 /*
- * AdministratorAuditorController.java
+ * AdministratorAuthorizedController.java
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.administrator.auditor;
+package acme.features.administrator.authorized;
 
 import javax.annotation.PostConstruct;
 
@@ -18,25 +18,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.roles.Auditor;
+import acme.entities.roles.Authorized;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Administrator;
 
 @Controller
-@RequestMapping("/administrator/auditor/")
-public class AdministratorAuditorController extends AbstractController<Administrator, Auditor> {
+@RequestMapping("/administrator/authorized/")
+public class AdministratorAuthorizedController extends AbstractController<Administrator, Authorized> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AdministratorAuditorListService		listService;
+	private AdministratorAuthorizedListService		listService;
 
 	@Autowired
-	private AdministratorAuditorShowService		showService;
+	private AdministratorAuthorizedShowService		showService;
 
 	@Autowired
-	private AdministratorAuditorUpdateService	updateService;
+	private AdministratorAuthorizedUpdateService	updateService;
 
 
 	// Constructors -----------------------------------------------------------

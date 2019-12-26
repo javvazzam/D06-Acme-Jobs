@@ -17,6 +17,6 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
-	<acme:list-column code="administrator.auditor.list.label.status" path="status" width="20%"/>
-	<acme:list-column code="administrator.auditor.list.label.body" path="body" width="40%"/>	
+	<acme:list-column code="administrator.authorized.list.label.status" path="status" width="20%"/>
+	<acme:list-column code="administrator.authorized.list.label.body" path="body" width="40%"/>	
 </acme:list>

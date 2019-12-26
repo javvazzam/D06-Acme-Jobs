@@ -10,26 +10,33 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.auditor;
+package acme.features.authenticated.authorized;
+
+import java.util.Collection;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.roles.Auditor;
 import acme.entities.roles.Authorized;
 import acme.framework.entities.UserAccount;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AuthenticatedAuditorRepository extends AbstractRepository {
+public interface AuthenticatedAuthorizedRepository extends AbstractRepository {
 
 	@Query("select ua from UserAccount ua where ua.id = ?1")
 	UserAccount findOneUserAccountById(int id);
 
-	@Query("select e from Auditor e where e.userAccount.id = ?1")
-	Auditor findOneAuditorByUserAccountId(int id);
+	//	@Query("select e from Auditor e where e.userAccount.id = ?1")
+	//	Auditor findOneAuditorByUserAccountId(int id);
 
 	@Query("select e from Authorized e where e.userAccount.id = ?1")
 	Authorized findOneAuthorizedByUserAccountId(int id);
+
+	@Query("select e from Authorized e where e.id = ?1")
+	Authorized findOneAuthorizedById(int id);
+
+	@Query("select e from Authorized e")
+	Collection<Authorized> findManyAll();
 
 }

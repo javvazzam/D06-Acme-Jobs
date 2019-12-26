@@ -104,7 +104,7 @@
 			<acme:menu-suboption code="master.menu.administrator.create_nonCommercialBanner"
 				action="/administrator/non-commercial-banner/create" access="hasRole('Administrator')" />
 			<!-- Auditors' request -->
-			<acme:menu-suboption code="master.menu.administrator.list_auditor_request" action="/administrator/auditor/list"
+			<acme:menu-suboption code="master.menu.administrator.list_auditor_request" action="/administrator/authorized/list"
 				access="hasRole('Administrator')" />
 
 		</acme:menu-option>
@@ -184,8 +184,10 @@
 			<acme:menu-suboption code="master.menu.user-account.become-sponsor" action="/authenticated/sponsor/create"
 				access="!hasRole('Sponsor')" />
 			<acme:menu-suboption code="master.menu.user-account.sponsor" action="/authenticated/sponsor/update" access="hasRole('Sponsor')" />
-			<acme:menu-suboption code="master.menu.user-account.become-auditor" action="/authenticated/auditor/create"
-				access="!hasRole('Auditor')" />
+			<acme:menu-suboption code="master.menu.user-account.request-become-auditor" action="/authenticated/authorized/create"
+				access="!hasRole('Authorized')" />
+			<acme:menu-suboption code="master.menu.user-account.become-auditor" action="/authenticated/authorized/show"
+			access="!hasRole('Auditor') && hasRole('Authorized')" />
 			<acme:menu-suboption code="master.menu.user-account.auditor" action="/authenticated/auditor/update" access="hasRole('Auditor')" />
 
 		</acme:menu-option>

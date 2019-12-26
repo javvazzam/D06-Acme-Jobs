@@ -34,9 +34,7 @@ public class AuditorAuditCreateService implements AbstractCreateService<Auditor,
 		Integer jobId = request.getModel().getInteger("id");
 		Job job = this.repository.findOneJobById(jobId);
 
-		boolean autorize = auditor.isRequest();
-
-		return autorize && job.isFinalMode();
+		return auditor != null && job.isFinalMode();
 	}
 
 	@Override
