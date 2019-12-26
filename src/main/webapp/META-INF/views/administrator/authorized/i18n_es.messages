@@ -1,0 +1,24 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.authorized.form.label.body = Cuerpo
+administrator.authorized.form.label.status = Estado de la petición
+administrator.authorized.form.label.status0 = Pendiente
+administrator.authorized.form.label.status1 = Aceptado
+administrator.authorized.form.label.statement = Declaración
+administrator.authorized.form.label.firm = Firma
+
+administrator.authorized.list.label.status = Estado de la petición
+administrator.authorized.list.label.body = Cuerpo
+
+administrator.authorized.form.button.update = Actualizar
+administrator.authorized.form.button.return = Volver
+
+administrator.authorized.statusNotCorrect = El estado de la solicitud debe ser "Pending" o "Accepted"

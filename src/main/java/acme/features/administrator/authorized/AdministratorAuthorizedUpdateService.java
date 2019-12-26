@@ -1,5 +1,5 @@
 /*
- * AdministratorAuditorUpdateService.java
+ * AdministratorAuthorizedUpdateService.java
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -10,12 +10,12 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.administrator.auditor;
+package acme.features.administrator.authorized;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.roles.Auditor;
+import acme.entities.roles.Authorized;
 import acme.framework.components.Errors;
 import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
@@ -26,36 +26,36 @@ import acme.framework.helpers.PrincipalHelper;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AdministratorAuditorUpdateService implements AbstractUpdateService<Administrator, Auditor> {
+public class AdministratorAuthorizedUpdateService implements AbstractUpdateService<Administrator, Authorized> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AdministratorAuditorRepository repository;
+	private AdministratorAuthorizedRepository repository;
 
 
-	// AbstractUpdateService<Administrator, Auditor> interface -----------------
+	// AbstractUpdateService<Administrator, Authorized> interface -----------------
 
 	@Override
-	public boolean authorise(final Request<Auditor> request) {
+	public boolean authorise(final Request<Authorized> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void validate(final Request<Auditor> request, final Auditor entity, final Errors errors) {
+	public void validate(final Request<Authorized> request, final Authorized entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
 
 		//Comprueba que status es "Accepted" o "Pending"
 		Boolean statusCorrect = request.getModel().getAttribute("status").equals("Accepted") || request.getModel().getAttribute("status").equals("Pending");
-		errors.state(request, statusCorrect, "status", "administrator.auditor.statusNotCorrect");
+		errors.state(request, statusCorrect, "status", "administrator.Authorized.statusNotCorrect");
 	}
 
 	@Override
-	public void bind(final Request<Auditor> request, final Auditor entity, final Errors errors) {
+	public void bind(final Request<Authorized> request, final Authorized entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -64,49 +64,49 @@ public class AdministratorAuditorUpdateService implements AbstractUpdateService<
 	}
 
 	@Override
-	public void unbind(final Request<Auditor> request, final Auditor entity, final Model model) {
+	public void unbind(final Request<Authorized> request, final Authorized entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		if (entity.isRequest()) {
+		if (entity.isAccepted()) {
 			model.setAttribute("status", "Accepted");
 		} else {
 			model.setAttribute("status", "Pending");
 		}
 
-		request.unbind(entity, model, "firm", "statement", "body");
+		request.unbind(entity, model, "body");
 	}
 
 	@Override
-	public Auditor findOne(final Request<Auditor> request) {
+	public Authorized findOne(final Request<Authorized> request) {
 		assert request != null;
 
-		Auditor result;
-		int auditorId;
+		Authorized result;
+		int AuthorizedId;
 
-		auditorId = request.getModel().getInteger("id");
-		result = this.repository.findOneAuditorById(auditorId);
+		AuthorizedId = request.getModel().getInteger("id");
+		result = this.repository.findOneAuthorizedById(AuthorizedId);
 
 		return result;
 	}
 
 	@Override
-	public void update(final Request<Auditor> request, final Auditor entity) {
+	public void update(final Request<Authorized> request, final Authorized entity) {
 		assert request != null;
 		assert entity != null;
 
 		if (request.getModel().getAttribute("status").equals("Accepted")) {
-			entity.setRequest(true);
+			entity.setAccepted(true);
 		} else {
-			entity.setRequest(false);
+			entity.setAccepted(false);
 		}
 
 		this.repository.save(entity);
 	}
 
 	@Override
-	public void onSuccess(final Request<Auditor> request, final Response<Auditor> response) {
+	public void onSuccess(final Request<Authorized> request, final Response<Authorized> response) {
 		assert request != null;
 		assert response != null;
 

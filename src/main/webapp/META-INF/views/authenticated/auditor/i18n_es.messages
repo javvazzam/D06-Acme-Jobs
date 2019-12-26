@@ -10,7 +10,6 @@
 
 administrator.auditor.form.label.firm = Firma
 administrator.auditor.form.label.statement = Declaración
-administrator.auditor.form.label.body = Cuerpo
 authenticated.auditor.form.button.create = Crear
 authenticated.auditor.form.button.update = Actualizar
 

@@ -54,9 +54,7 @@
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
-        `body` varchar(255),
         `firm` varchar(255),
-        `request` bit not null,
         `statement` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
@@ -65,6 +63,15 @@
        `id` integer not null,
         `version` integer not null,
         `user_account_id` integer,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `authorized` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `accepted` bit not null,
+        `body` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -371,6 +378,11 @@ create index IDX2qy5jkiqwk6f13kkfq8pu61le on `solicitud` (`ticker`);
 
     alter table `authenticated` 
        add constraint FK_h52w0f3wjoi68b63wv9vwon57 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `authorized` 
+       add constraint FK_keqakltjauwrbk13pgunccany 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 

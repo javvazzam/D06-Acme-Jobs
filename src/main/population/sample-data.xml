@@ -1203,8 +1203,6 @@
 	<bean name="auditor1Auditor" class="acme.entities.roles.Auditor">
 		<property name="firm" value="Auditor 1(firma)" />
 		<property name="statement" value="statement 1" />
-		<property name="request" value="true" />
-		<property name="body" value="aceptame porfa" />
 		<property name="userAccount" ref="auditor1UserAccount" />
 	</bean>
 	<bean name="auditor1Authenticated" class="acme.framework.entities.Authenticated">
@@ -1232,8 +1230,6 @@
 	<bean name="auditor2Auditor" class="acme.entities.roles.Auditor">
 		<property name="firm" value="Auditor 2(firma)" />
 		<property name="statement" value="statement 2" />
-		<property name="request" value="true" />
-		<property name="body" value="aceptame porfa" />
 		<property name="userAccount" ref="auditor2UserAccount" />
 	</bean>
 
@@ -1258,8 +1254,6 @@
 	<bean name="auditor3Auditor" class="acme.entities.roles.Auditor">
 		<property name="firm" value="Auditor 3(firma)" />
 		<property name="statement" value="statement 3" />
-		<property name="request" value="true" />
-		<property name="body" value="aceptame porfa" />
 		<property name="userAccount" ref="auditor3UserAccount" />
 	</bean>
 
@@ -1284,8 +1278,6 @@
 	<bean name="auditor4Auditor" class="acme.entities.roles.Auditor">
 		<property name="firm" value="Auditor 4(firma)" />
 		<property name="statement" value="statement 4" />
-		<property name="request" value="true" />
-		<property name="body" value="aceptame porfa" />
 		<property name="userAccount" ref="auditor4UserAccount" />
 	</bean>
 
@@ -1310,8 +1302,6 @@
 	<bean name="auditor5Auditor" class="acme.entities.roles.Auditor">
 		<property name="firm" value="Auditor 5(firma)" />
 		<property name="statement" value="statement 5" />
-		<property name="request" value="true" />
-		<property name="body" value="aceptame porfa" />
 		<property name="userAccount" ref="auditor5UserAccount" />
 	</bean>
 

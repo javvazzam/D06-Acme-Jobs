@@ -1,55 +1,55 @@
 
-package acme.features.administrator.auditor;
+package acme.features.administrator.authorized;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.roles.Auditor;
+import acme.entities.roles.Authorized;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AdministratorAuditorShowService implements AbstractShowService<Administrator, Auditor> {
+public class AdministratorAuthorizedShowService implements AbstractShowService<Administrator, Authorized> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AdministratorAuditorRepository repository;
+	private AdministratorAuthorizedRepository repository;
 
 
 	@Override
-	public boolean authorise(final Request<Auditor> request) {
+	public boolean authorise(final Request<Authorized> request) {
 		assert request != null;
 
 		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Auditor> request, final Auditor entity, final Model model) {
+	public void unbind(final Request<Authorized> request, final Authorized entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		if (entity.isRequest()) {
+		if (entity.isAccepted()) {
 			model.setAttribute("status", "Accepted");
 		} else {
 			model.setAttribute("status", "Pending");
 		}
 
-		request.unbind(entity, model, "firm", "statement", "body");
+		request.unbind(entity, model, "body");
 	}
 
 	@Override
-	public Auditor findOne(final Request<Auditor> request) {
+	public Authorized findOne(final Request<Authorized> request) {
 		assert request != null;
 
-		Auditor result;
+		Authorized result;
 		int id;
 
 		id = request.getModel().getInteger("id");
-		result = this.repository.findOneAuditorById(id);
+		result = this.repository.findOneAuthorizedById(id);
 
 		return result;
 	}

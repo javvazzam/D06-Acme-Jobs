@@ -1,4 +1,4 @@
-# i18n_en.messages
+# i18n_es.messages
 #
 # Copyright (c) 2019 Rafael Corchuelo.
 #
@@ -8,9 +8,12 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.auditor.form.label.firm = Firm
-authenticated.auditor.form.label.statement = Statement
-authenticated.auditor.form.button.create = Create
-authenticated.auditor.form.button.update = Update
+authenticated.authorized.list.label.body = Cuerpo
 
-authenticated.auditor.form.button.return = Return
+authenticated.authorized.form.label.body = Cuerpo
+authenticated.authorized.form.label.status = Estado de la solicitud
+
+authenticated.auditor.form.button.create = Convertirse en un auditor
+authenticated.authorized.form.button.create = Crear solicitud para auditor
+
+authenticated.authorized.form.button.return = Volver

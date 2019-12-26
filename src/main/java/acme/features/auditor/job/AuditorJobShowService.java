@@ -32,9 +32,7 @@ public class AuditorJobShowService implements AbstractShowService<Auditor, Job> 
 
 		Auditor auditor = this.repository.findOneAuditorByUserAccountId(auditorId);
 
-		boolean autorize = auditor.isRequest();
-
-		return autorize && job.isFinalMode();
+		return auditor != null && job.isFinalMode();
 	}
 
 	@Override
