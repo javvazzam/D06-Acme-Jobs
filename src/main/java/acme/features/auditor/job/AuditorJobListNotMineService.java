@@ -64,6 +64,7 @@ public class AuditorJobListNotMineService implements AbstractListService<Auditor
 		jobsRealizados = this.repository.findManyByAuditorId(principal.getActiveRoleId());
 		todosJobs = this.repository.findManyPublishedJobs();
 		result = todosJobs.stream().filter(j -> !jobsRealizados.contains(j)).collect(Collectors.toList());
+		//Interseccion de todosJobs con jobsRealizados
 
 		return result;
 	}

@@ -40,6 +40,10 @@ public interface AuthenticatedThreadRepository extends AbstractRepository {
 	@Query("select p from Participant p where p.user.id = ?1")
 	Collection<Participant> findManyByUserId(int id);
 
+	@Query("select t from Thread t where exists (select p from Participant p where p.user.id = ?1 and p.thread.id=t.id)")
+	Collection<Thread> findManyThreadsInParticipantByUserId(int id);
+	//select t from Thread t where exists (select p from Participant p where p.user.id = 8 and p.thread.id=t.id);
+
 	@Query("select a from Authenticated a where a.userAccount.id = ?1")
 	Authenticated findOneAuthenticatedByUserAccountId(int id);
 

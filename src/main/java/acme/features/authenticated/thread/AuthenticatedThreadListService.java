@@ -2,12 +2,10 @@
 package acme.features.authenticated.thread;
 
 import java.util.Collection;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.participants.Participant;
 import acme.entities.threads.Thread;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -45,11 +43,13 @@ public class AuthenticatedThreadListService implements AbstractListService<Authe
 		assert request != null;
 
 		Collection<Thread> result;
-		Collection<Participant> participants;
+		//Collection<Participant> participants;
 
 		Principal principal = request.getPrincipal();
-		participants = this.repository.findManyByUserId(principal.getActiveRoleId());
-		result = participants.stream().map(p -> p.getThread()).collect(Collectors.toList());
+		//participants = this.repository.findManyByUserId(principal.getActiveRoleId());
+		//result = participants.stream().map(p -> p.getThread()).collect(Collectors.toList());
+
+		result = this.repository.findManyThreadsInParticipantByUserId(principal.getActiveRoleId());
 
 		return result;
 	}

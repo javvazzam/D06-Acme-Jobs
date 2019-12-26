@@ -48,11 +48,13 @@ public class AuthenticatedMessageCreateService implements AbstractCreateService<
 		Boolean result;
 		int threadId;
 		List<Authenticated> usuariosThread;
+		//Principal principal = request.getPrincipal();
+		//int authenticatedId = principal.getAccountId();
 
 		threadId = request.getModel().getInteger("id");
 		usuariosThread = this.repository.findManyAuthenticatedByThreadId(threadId);
 		result = usuariosThread.stream().map(u -> u.getUserAccount().getId()).anyMatch(i -> request.getPrincipal().getAccountId() == i);
-
+		//boolean idk = this.repository.findManyAuthenticatedByThreadId(threadId, authenticatedId);
 		return result;
 	}
 

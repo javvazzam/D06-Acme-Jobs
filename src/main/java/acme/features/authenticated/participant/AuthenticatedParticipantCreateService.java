@@ -61,6 +61,7 @@ public class AuthenticatedParticipantCreateService implements AbstractCreateServ
 		Collection<Authenticated> usuariosEnThread = this.repository.findManyAutheticatedByThread(idThread);
 		Collection<Authenticated> usuariosTotales = this.repository.findManyAutheticated();
 		Collection<Authenticated> usuarios = usuariosTotales.stream().filter(u -> !usuariosEnThread.contains(u)).collect(Collectors.toList());
+		//Aqui hay que hacer la interseccion del conjunto de todos los usuarios con el conjunto de usuarios del hilo
 
 		model.setAttribute("usuarios", usuarios);
 		//model.setAttribute("username", entity.getUser().getUserAccount().getUsername());
