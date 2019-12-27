@@ -1,7 +1,6 @@
 
 package acme.features.employer.job;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -10,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.customization.Customization;
-import acme.entities.duties.Duty;
 import acme.entities.jobs.Job;
 import acme.entities.roles.Employer;
 import acme.framework.components.Errors;
@@ -86,12 +84,14 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		assert entity != null;
 		assert errors != null;
 
+		int jobId;
+		jobId = entity.getId();
+
 		//Comprueba si el job está ya publicado
 		errors.state(request, !entity.isFinalMode(), "status", "employer.job.isAlreadyPublished");
 
 		//Comprueba que los duties sumen un 100% y que el descriptor no esté vacío si se quiere publicar el job
-		Collection<Duty> d = this.repository.findDutyByJob(entity.getId());
-		Double suma = d.stream().mapToDouble(x -> x.getTimeAmount()).sum();
+		Double suma = this.repository.sumTimeAmountDutyByJob(jobId);
 		Boolean sumUp;
 		String description = request.getModel().getAttribute("description").toString();
 		if (request.getModel().getAttribute("status").equals("Published")) {

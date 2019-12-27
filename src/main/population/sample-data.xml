@@ -1546,7 +1546,7 @@
 		<property name="moment" value="2018/12/21 01:00" />
 		<property name="body" value="Auditory 1" />
 		<property name="auditor" ref="auditor1Auditor" />
-		<property name="job" ref="job1" />
+		<property name="job" ref="job3" />
 	</bean>
 
 	<bean name="audit2" class="acme.entities.audits.Audit">

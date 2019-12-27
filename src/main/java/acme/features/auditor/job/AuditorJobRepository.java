@@ -33,6 +33,9 @@ public interface AuditorJobRepository extends AbstractRepository {
 	@Query("select a.job from Audit a where a.auditor.id!=?1 and a.job.finalMode=1")
 	Collection<Job> findNotManyByAuditorId(int auditorId);
 
+	@Query("select j from Job j where finalMode=1 and not exists(select a from Audit a where a.job.id=j.id and a.auditor.userAccount.id=?1)")
+	Collection<Job> findManyNotAuditedJobByAuditorId(int auditorId);
+
 	@Query("select j from Job j where j.finalMode = 1")
 	Collection<Job> findManyPublishedJobs();
 

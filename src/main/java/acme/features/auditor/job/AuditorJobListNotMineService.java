@@ -2,7 +2,6 @@
 package acme.features.auditor.job;
 
 import java.util.Collection;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -55,16 +54,11 @@ public class AuditorJobListNotMineService implements AbstractListService<Auditor
 	public Collection<Job> findMany(final Request<Job> request) {
 		assert request != null;
 
-		Collection<Job> todosJobs;
-		Collection<Job> jobsRealizados;
 		Collection<Job> result;
 		Principal principal;
 
 		principal = request.getPrincipal();
-		jobsRealizados = this.repository.findManyByAuditorId(principal.getActiveRoleId());
-		todosJobs = this.repository.findManyPublishedJobs();
-		result = todosJobs.stream().filter(j -> !jobsRealizados.contains(j)).collect(Collectors.toList());
-		//Interseccion de todosJobs con jobsRealizados
+		result = this.repository.findManyNotAuditedJobByAuditorId(principal.getAccountId());
 
 		return result;
 	}

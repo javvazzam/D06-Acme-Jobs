@@ -39,6 +39,12 @@ public interface EmployerJobRepository extends AbstractRepository {
 	@Query("select d from Duty d where d.job.id= ?1")
 	Collection<Duty> findDutyByJob(int jobId);
 
+	@Query("delete Duty d where d.job.id=?1")
+	void deleteDutiesByJobId(int jobId);
+
+	@Query("select 1.0*sum(d.timeAmount) from Duty d where d.job.id= ?1")
+	Double sumTimeAmountDutyByJob(int jobId);
+
 	@Query("select e from Employer e where e.userAccount.id= ?1")
 	Employer findOneEmployerByUserAccountId(int employerId);
 
