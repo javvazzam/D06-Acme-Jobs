@@ -29,7 +29,12 @@
 	</acme:form-select>
 	</jstl:if>
 	
-	<acme:form-submit test="${command == 'show'}" code="authenticated.participant.form.button.delete" action="/authenticated/participant/delete"/>
+	<acme:form-hidden path="notMe"/>
+	
+	<jstl:if test="${notMe=='false'}">
+		<acme:form-submit test="${command == 'show'}" code="authenticated.participant.form.button.delete" action="/authenticated/participant/delete"/>
+	</jstl:if>
+	
 	<acme:form-submit test="${command == 'create'}" code="authenticated.participant.form.button.create" action="${direccionParticipant}"/>
   	<acme:form-return code="authenticated.participant.form.button.return"/>
 </acme:form>

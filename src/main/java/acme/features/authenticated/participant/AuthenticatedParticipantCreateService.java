@@ -2,7 +2,6 @@
 package acme.features.authenticated.participant;
 
 import java.util.Collection;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +12,7 @@ import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractCreateService;
 
 @Service
@@ -27,8 +27,22 @@ public class AuthenticatedParticipantCreateService implements AbstractCreateServ
 	@Override
 	public boolean authorise(final Request<Participant> request) {
 		assert request != null;
+		Boolean result;
+		int countUser;
+		int threadId;
 
-		return true;
+		Principal principal;
+		int principalId;
+
+		threadId = request.getModel().getInteger("threadid");
+
+		principal = request.getPrincipal();
+		principalId = principal.getAccountId();
+		countUser = this.repository.countAuthenticatedByThreadId(principalId, threadId);
+
+		result = countUser != 0;			// si suma 1 significa que dicho thread pertenece a dicho Authenticated
+
+		return result;
 	}
 
 	@Override
@@ -58,9 +72,7 @@ public class AuthenticatedParticipantCreateService implements AbstractCreateServ
 		String direccionParticipant = "../participant/create?threadid=" + idThread;
 		model.setAttribute("direccionParticipant", direccionParticipant);
 
-		Collection<Authenticated> usuariosEnThread = this.repository.findManyAutheticatedByThread(idThread);
-		Collection<Authenticated> usuariosTotales = this.repository.findManyAutheticated();
-		Collection<Authenticated> usuarios = usuariosTotales.stream().filter(u -> !usuariosEnThread.contains(u)).collect(Collectors.toList());
+		Collection<Authenticated> usuarios = this.repository.findManyAuthenticatedNotInThread(idThread);
 		//Aqui hay que hacer la interseccion del conjunto de todos los usuarios con el conjunto de usuarios del hilo
 
 		model.setAttribute("usuarios", usuarios);
