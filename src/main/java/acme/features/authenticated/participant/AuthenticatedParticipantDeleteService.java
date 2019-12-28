@@ -9,6 +9,7 @@ import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractDeleteService;
 
 @Service
@@ -42,7 +43,17 @@ public class AuthenticatedParticipantDeleteService implements AbstractDeleteServ
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+		Authenticated authenticated;
+		Principal principal;
+		int principalId;
+		principal = request.getPrincipal();
+		principalId = principal.getAccountId();
+		authenticated = entity.getUser();
+		boolean notMe = authenticated.getUserAccount().getId() != principalId;
 
+		model.setAttribute("notMe", notMe);
+
+		model.setAttribute("username", entity.getUser().getUserAccount().getUsername());
 		request.unbind(entity, model);
 
 	}
@@ -66,6 +77,7 @@ public class AuthenticatedParticipantDeleteService implements AbstractDeleteServ
 		assert entity != null;
 		assert errors != null;
 
+		//errors.state(request, result, "username", "authenticated.participant.delete.cantDeleteYourself");
 	}
 
 	@Override

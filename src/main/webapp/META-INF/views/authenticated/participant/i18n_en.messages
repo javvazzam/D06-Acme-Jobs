@@ -15,3 +15,5 @@ authenticated.participant.form.button.create = Add user
 
 authenticated.participant.list.label.username = User
 authenticated.participant.form.button.return = Return
+
+authenticated.participant.delete.cantDeleteYourself = You cannot delete Yourself!!!

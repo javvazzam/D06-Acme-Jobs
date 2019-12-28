@@ -8,6 +8,7 @@ import acme.entities.participants.Participant;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -31,8 +32,20 @@ public class AuthenticatedParticipantShowService implements AbstractShowService<
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+
+		Authenticated authenticated;
+		Principal principal;
+		int principalId;
+		principal = request.getPrincipal();
+		principalId = principal.getAccountId();
+		authenticated = entity.getUser();
+		boolean notMe = authenticated.getUserAccount().getId() != principalId;
+
+		model.setAttribute("notMe", notMe);
+
 		String username = entity.getUser().getUserAccount().getUsername();
 		model.setAttribute("username", username);
+
 		request.unbind(entity, model, "user");
 
 	}

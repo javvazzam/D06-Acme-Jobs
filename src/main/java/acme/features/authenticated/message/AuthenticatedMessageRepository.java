@@ -44,4 +44,17 @@ public interface AuthenticatedMessageRepository extends AbstractRepository {
 
 	@Query("select p.user from Participant p where p.thread.id = ?1")
 	List<Authenticated> findManyAuthenticatedByThreadId(int id);
+
+	//@Query("select a from Authenticated a where exists(select p from Participant p where p.user.id = a.userAccount.id and p.thread.id = ?1)")
+	@Query("select count(p) from Participant p where p.user.userAccount.id = ?1 and p.thread.id = ?2")
+	int countAuthenticatedByThreadId(int idUser, int idThread);
+
+	//@Query("(select a from Authenticated a where a.userAccount.id = ?2) MEMBER OF (select p.user from Participant p where p.thread.id = ?1)")
+	//boolean findManyAuthenticatedByThreadId(int id, int id2);
+	//(select a from Authenticated a where a.userAccount.id = 7) MEMBER OF (select p.user from Participant p where p.thread.id = 207)
+	// select p.user from Participant p where p.thread.id = 207 where exists (select a from Authenticated a where a.userAccount.id = 7);
+	// select p.user where exists (select a from Authenticated a where a.userAccount.id = 7) from Participant p where p.thread.id = 207;
+	// select p.user from Participant p where exists (select a from Authenticated a where a.userAccount.id = 7) where p.thread.id = 207;
+	// select p.user from Participant p member of (select a from Authenticated a where a.userAccount.id = 7) where p.thread.id = 207;
+	// select p.user from Participant p where p.thread.id = 207 member of (select a from Authenticated a where a.userAccount.id = 7);
 }

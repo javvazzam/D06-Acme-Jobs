@@ -60,7 +60,6 @@ public class AuditorAuditCreateService implements AbstractCreateService<Auditor,
 		} else {
 			model.setAttribute("status", "Draft");
 		}
-
 		request.unbind(entity, model, "title", "body");
 	}
 
@@ -98,6 +97,15 @@ public class AuditorAuditCreateService implements AbstractCreateService<Auditor,
 	public void create(final Request<Audit> request, final Audit entity) {
 		assert request != null;
 		assert entity != null;
+
+		boolean finalMode;
+		String status = request.getModel().getAttribute("status").toString();
+		if (status.equals("Published")) {
+			finalMode = true;
+		} else {
+			finalMode = false;
+		}
+		entity.setFinalMode(finalMode);
 
 		this.repository.save(entity);
 	}

@@ -1,8 +1,6 @@
 
 package acme.features.authenticated.thread;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +8,7 @@ import acme.entities.threads.Thread;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -26,12 +25,19 @@ public class AuthenticatedThreadShowService implements AbstractShowService<Authe
 		assert request != null;
 
 		Boolean result;
+		int countUser;
 		int threadId;
-		List<Authenticated> usuariosThread;
+
+		Principal principal;
+		int principalId;
 
 		threadId = request.getModel().getInteger("id");
-		usuariosThread = this.repository.findManyAuthenticatedByThreadId(threadId);
-		result = usuariosThread.stream().map(u -> u.getUserAccount().getId()).anyMatch(i -> request.getPrincipal().getAccountId() == i);
+
+		principal = request.getPrincipal();
+		principalId = principal.getAccountId();
+		countUser = this.repository.countAuthenticatedByThreadId(principalId, threadId);
+
+		result = countUser != 0;			// si suma 1 significa que dicho thread pertenece a dicho Authenticated
 
 		return result;
 	}

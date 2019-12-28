@@ -47,4 +47,9 @@ public interface AuthenticatedParticipantRepository extends AbstractRepository {
 	@Query("select p from Participant p where p.thread.id = ?1")
 	Collection<Participant> findManyUsersByThread(int idThread);
 
+	@Query("select a from Authenticated a where not exists(select p from Participant p where p.user.userAccount.id = a.userAccount.id and p.thread.id = ?1)")
+	Collection<Authenticated> findManyAuthenticatedNotInThread(int idThread);
+
+	@Query("select count(p) from Participant p where p.user.userAccount.id = ?1 and p.thread.id = ?2")
+	int countAuthenticatedByThreadId(int idUser, int idThread);
 }
