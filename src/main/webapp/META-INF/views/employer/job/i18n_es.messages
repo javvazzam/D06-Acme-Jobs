@@ -19,8 +19,6 @@ employer.job.form.label.description = Descripción:
 employer.job.form.button.auditList = Lista de audiciones
 employer.job.form.button.duties = Labores
 employer.job.form.button.createDuties = Crear labores
-employer.job.form.button.createDare = Crear desafío
-employer.job.form.button.dareShow = Desafío
 
 employer.job.form.button.create = Crear
 employer.job.form.button.delete = Eliminar
