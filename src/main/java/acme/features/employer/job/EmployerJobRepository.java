@@ -50,4 +50,5 @@ public interface EmployerJobRepository extends AbstractRepository {
 
 	@Query("select c from Customization c")
 	Customization findCustomization();
+
 }

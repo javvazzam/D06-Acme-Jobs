@@ -49,6 +49,7 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 
 		Dashboard result = new Dashboard();
 
+		//Numbers
 		result.setTotalNumberOfAnnouncements(this.repository.countAnnouncements());
 		result.setTotalNumberOfCompanyRecords(this.repository.countCompanyRecords());
 		result.setTotalNumberOfInvestorRecords(this.repository.countInvestorRecords());

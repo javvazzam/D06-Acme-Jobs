@@ -47,9 +47,9 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 		int idJob = request.getModel().getInteger("id");
 		String direccionJob = "../application/create?id=" + idJob;
 		model.setAttribute("direccionJob", direccionJob);
-
 		request.unbind(entity, model, "reference", "status", "moment", "job", "worker");
 		request.unbind(entity, model, "statement", "skills", "qualifications");
+
 	}
 
 	@Override
@@ -88,6 +88,7 @@ public class WorkerApplicationCreateService implements AbstractCreateService<Wor
 
 		GregorianCalendar calendar = new GregorianCalendar();
 		Date minimumDeadline = calendar.getTime();
+
 		errors.state(request, entity.getJob().getDeadline().after(minimumDeadline), "referenceJob", "worker.application.tryingToApplyPastJob");
 
 		errors.state(request, entity.getJob().isFinalMode(), "referenceJob", "worker.application.tryingToApplyNotPublished");

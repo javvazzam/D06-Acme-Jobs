@@ -611,7 +611,8 @@ Application
 + justification: String
 + statement: String {NotBlank}
 + skills: String {NotBlank}
-+ qualifications: String {NotBlank}</panel_attributes>
++ qualifications: String {NotBlank}
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
