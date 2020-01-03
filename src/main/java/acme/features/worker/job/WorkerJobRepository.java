@@ -28,4 +28,5 @@ public interface WorkerJobRepository extends AbstractRepository {
 
 	@Query("select j from Job j where j.deadline >= current_date() AND j.finalMode =1")
 	Collection<Job> findManyAll();
+
 }

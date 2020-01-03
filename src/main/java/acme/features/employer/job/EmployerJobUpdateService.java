@@ -91,12 +91,18 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		errors.state(request, !entity.isFinalMode(), "status", "employer.job.isAlreadyPublished");
 
 		//Comprueba que los duties sumen un 100% y que el descriptor no esté vacío si se quiere publicar el job
+
 		Double suma = this.repository.sumTimeAmountDutyByJob(jobId);
 		Boolean sumUp;
 		String description = request.getModel().getAttribute("description").toString();
 		if (request.getModel().getAttribute("status").equals("Published")) {
-			sumUp = suma == 100;
-			//Error de la suma de los duties
+			if (suma != null) {
+				sumUp = suma == 100;
+				//Error de la suma de los duties
+
+			} else {
+				sumUp = false;
+			}
 			errors.state(request, sumUp, "status", "employer.job.dutiesNotSumUp");
 			//Error del descriptor
 			errors.state(request, !description.isEmpty(), "description", "employer.job.descriptorIsEmpty");

@@ -12,6 +12,7 @@
 
 administrator.dashboard.form.label.listdashboard = List dashboard
 
+
 administrator.dashboard.form.label.averageJobsPerEmployer = Average of jobs per employer:
 administrator.dashboard.form.label.averageApplicationsPerEmployer = Average applications per employer:
 administrator.dashboard.form.label.averageApplicationsPerWorker = Average applications per worker:

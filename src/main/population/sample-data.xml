@@ -2274,4 +2274,5 @@
 		<property name="user" ref="sponsor1Authenticated" />
 		<property name="thread" ref="thread6" />
 	</bean>
+	
 </beans>

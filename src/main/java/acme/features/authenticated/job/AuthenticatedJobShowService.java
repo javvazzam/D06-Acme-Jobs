@@ -7,11 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.jobs.Job;
-import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Authenticated;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -30,17 +28,14 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 		boolean result;
 		int jobId;
 		Job job;
-		Employer employer;
-		Principal principal;
 
 		jobId = request.getModel().getInteger("id");
 		job = this.repository.findOneJobById(jobId);
-		employer = job.getEmployer();
-		principal = request.getPrincipal();
+
 		boolean deadlineFuture;
 		Date deadline = job.getDeadline();
 		deadlineFuture = deadline.getTime() > System.currentTimeMillis();
-		result = (job.isFinalMode() || !job.isFinalMode() && employer.getUserAccount().getId() == principal.getAccountId()) && deadlineFuture;
+		result = job.isFinalMode()/* || !job.isFinalMode() && employer.getUserAccount().getId() == principal.getAccountId()) */ && deadlineFuture;
 
 		return result;
 	}

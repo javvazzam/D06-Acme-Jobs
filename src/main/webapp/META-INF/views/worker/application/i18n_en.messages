@@ -24,6 +24,7 @@ worker.application.form.label.status.accepted = Accepted
 worker.application.form.label.statement = Statement
 worker.application.form.label.skills = Skills
 worker.application.form.label.qualifications = Qualifications
+
 worker.application.form.button.return = Return
 worker.job.form.button.application.create = Create Application
 worker.application.form.button.create = Create Application

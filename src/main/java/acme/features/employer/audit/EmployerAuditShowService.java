@@ -10,6 +10,7 @@ import acme.entities.roles.Auditor;
 import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -25,7 +26,21 @@ public class EmployerAuditShowService implements AbstractShowService<Employer, A
 	public boolean authorise(final Request<Audit> request) {
 		assert request != null;
 
-		return true;
+		boolean result;
+		int auditId;
+		Audit audit;
+		Job job;
+		Employer employer;
+		Principal principal;
+
+		auditId = request.getModel().getInteger("id");
+		audit = this.repository.findOneAuditById(auditId);
+		job = audit.getJob();
+		employer = job.getEmployer();
+		principal = request.getPrincipal();
+		result = employer.getUserAccount().getId() == principal.getAccountId();
+
+		return result;
 	}
 
 	@Override

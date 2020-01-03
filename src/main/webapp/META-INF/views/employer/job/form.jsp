@@ -47,6 +47,7 @@ s not guaranteed for any particular
 			<acme:form-return code="employer.job.form.button.createDuties" action="${jobCreateDuty}" />
 		</jstl:if>
 		<acme:form-return code="employer.job.form.button.auditList" action="${auditList}" />
+		
 	</jstl:if>
 
 

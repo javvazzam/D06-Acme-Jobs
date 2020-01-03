@@ -22,6 +22,8 @@ employer.job.form.label.description = Description:
 employer.job.form.button.auditList = Audit list
 employer.job.form.button.duties = Duties
 employer.job.form.button.createDuties = Create duties
+employer.job.form.button.createDare = Create dare
+employer.job.form.button.dareShow = Dare
 
 employer.job.form.button.create = Create
 employer.job.form.button.update = Update
