@@ -61,6 +61,24 @@ public class EmployerDutyUpdateService implements AbstractUpdateService<Employer
 		assert entity != null;
 		assert model != null;
 
+		boolean notFinalMode;
+		boolean iAmPrincipal;
+		int dutyId;
+		Duty duty;
+		Job job;
+		Employer employer;
+		Principal principal;
+
+		dutyId = request.getModel().getInteger("id");
+		duty = this.repository.findOneById(dutyId);
+		job = duty.getJob();
+		employer = job.getEmployer();
+		principal = request.getPrincipal();
+		iAmPrincipal = employer.getUserAccount().getId() == principal.getAccountId();
+		notFinalMode = /* job.isFinalMode() || */!job.isFinalMode() && iAmPrincipal;
+		model.setAttribute("notFinalMode", notFinalMode);
+		model.setAttribute("iAmPrincipal", iAmPrincipal);
+
 		request.unbind(entity, model, "title", "description", "timeAmount");
 	}
 

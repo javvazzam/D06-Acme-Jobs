@@ -57,7 +57,7 @@ s not guaranteed for any particular
 	<acme:form-hidden path="iAmPrincipal"/>
 
 	<jstl:if test="${result=='true'}">
-		<acme:form-submit test="${command == 'show' || command == 'update' || command == 'delete'}" code="employer.job.form.button.update"
+		<acme:form-submit test="${command == 'show' || command == 'update'}" code="employer.job.form.button.update"
 			action="/employer/job/update" />
 	</jstl:if>
 
