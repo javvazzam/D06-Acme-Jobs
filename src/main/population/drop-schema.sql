@@ -47,10 +47,6 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
-    alter table `dare` 
-       drop 
-       foreign key `FK1ygh5uri5q2aqmfvarh2gf1to`;
-
     alter table `duty` 
        drop 
        foreign key `FKs2uoxh4i5ya8ptyefae60iao1`;
@@ -122,8 +118,6 @@
     drop table if exists `consumer`;
 
     drop table if exists `customization`;
-
-    drop table if exists `dare`;
 
     drop table if exists `duty`;
 

@@ -21,5 +21,6 @@ employer.duty.form.button.delete = Eliminar
 employer.job.form.button.return = Volver
 employer.duty.form.button.create = Crear labor
 
+employer.job.cannotCreateDuty = La cantidad de tiempo de las duties no pueden sumar mas de un total del 100%
 employer.duty.cannotDeleteAll = No se pueden eliminar todas las labores de un descriptor
 employer.duty.spamWords = No puede introducir palabras inapropiadas

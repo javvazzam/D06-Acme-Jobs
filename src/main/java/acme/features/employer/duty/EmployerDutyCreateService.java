@@ -85,6 +85,21 @@ public class EmployerDutyCreateService implements AbstractCreateService<Employer
 		assert entity != null;
 		assert errors != null;
 
+		//Comprobamos que las duties creadas no sumen un total mayor a 100%
+		int jobId;
+		Boolean sumUp;
+
+		jobId = request.getModel().getInteger("id");
+		Double suma = this.repository.sumTimeAmountDutyByJob(jobId);
+
+		if (suma != null) {
+			Double sumaDuties = suma + entity.getTimeAmount();
+			sumUp = sumaDuties <= 100;
+		} else {
+			sumUp = entity.getTimeAmount() <= 100;
+		}
+		errors.state(request, sumUp, "timeAmount", "employer.job.cannotCreateDuty");
+
 		//Comprueba el spam
 		String title = entity.getTitle();
 		String[] titleArray = title.split(" ");

@@ -26,7 +26,6 @@
     create table `application` (
        `id` integer not null,
         `version` integer not null,
-        `answer` varchar(255),
         `justification` varchar(255),
         `moment` datetime(6),
         `qualifications` varchar(255),
@@ -34,7 +33,6 @@
         `skills` varchar(255),
         `statement` varchar(255),
         `status` varchar(255),
-        `xxx4` varchar(255),
         `job_id` integer not null,
         `worker_id` integer not null,
         primary key (`id`)
@@ -145,16 +143,6 @@
         `version` integer not null,
         `spam` varchar(255),
         `threshold` double precision,
-        primary key (`id`)
-    ) engine=InnoDB;
-
-    create table `dare` (
-       `id` integer not null,
-        `version` integer not null,
-        `more_info` varchar(255),
-        `password` varchar(255),
-        `text` varchar(255),
-        `job_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -332,10 +320,6 @@ create index IDXoqmmqbafwj4m9wgwqexcmckjs on `audit` (`final_mode`);
 create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
 create index IDX3vwg77973akwy9ilnfq707yt1 on `company` (`stars`);
 create index IDXbm7mwffwxwiukjmbmt9t1qnnu on `company` (`sector`);
-create index IDXsxt70v3kwa209teqy90roxr8f on `dare` (`password`);
-
-    alter table `dare` 
-       add constraint UK_nllnej8asaxxvuewy1j0jp2te unique (`job_id`);
 create index IDXq1q335kxox0leg1u9hhndvue1 on `investor` (`stars`);
 create index IDX1slmmcr1g0wv9jbgun6rny0oy on `investor` (`sector`);
 create index IDXfdmpnr8o4phmk81sqsano16r on `job` (`deadline`);
@@ -416,11 +400,6 @@ create index IDX2qy5jkiqwk6f13kkfq8pu61le on `solicitud` (`ticker`);
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
-
-    alter table `dare` 
-       add constraint `FK1ygh5uri5q2aqmfvarh2gf1to` 
-       foreign key (`job_id`) 
-       references `job` (`id`);
 
     alter table `duty` 
        add constraint `FKs2uoxh4i5ya8ptyefae60iao1` 
