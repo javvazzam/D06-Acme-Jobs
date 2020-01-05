@@ -32,14 +32,19 @@ public class EmployerJobDeleteService implements AbstractDeleteService<Employer,
 		Job job;
 		Employer employer;
 		Principal principal;
+		Collection<Application> applications;
+		int numberApplications;
 
 		jobId = request.getModel().getInteger("id");
 		job = this.repository.findOneJobById(jobId);
 		employer = job.getEmployer();
 		principal = request.getPrincipal();
-		result = !job.isFinalMode() && employer.getUserAccount().getId() == principal.getAccountId();
+		result = employer.getUserAccount().getId() == principal.getAccountId();
 
-		return result;
+		applications = this.repository.findApplicationsByJob(jobId);
+		numberApplications = applications.size();
+
+		return result && numberApplications == 0;
 	}
 
 	@Override
@@ -58,7 +63,7 @@ public class EmployerJobDeleteService implements AbstractDeleteService<Employer,
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "reference");
+		request.unbind(entity, model);
 	}
 
 	@Override

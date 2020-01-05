@@ -37,4 +37,7 @@ public interface EmployerDutyRepository extends AbstractRepository {
 	@Query("select c from Customization c")
 	Customization findCustomization();
 
+	@Query("select 1.0*sum(d.timeAmount) from Duty d where d.job.id= ?1")
+	Double sumTimeAmountDutyByJob(int jobId);
+
 }

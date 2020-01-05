@@ -21,6 +21,7 @@ employer.duty.form.button.delete = Delete
 employer.job.form.button.return = Return
 employer.duty.form.button.create = Create duty
 
+employer.job.cannotCreateDuty = The total time amount of the duties cannot be more than 100%
 employer.duty.cannotDeleteAll = Cannot delete all duties of the descriptor
 employer.duty.spamWords = Do not write spam words
 
