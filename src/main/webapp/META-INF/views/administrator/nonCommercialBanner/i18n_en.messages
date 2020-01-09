@@ -14,11 +14,6 @@ administrator.nonCommercialBanner.form.label.slogan = Slogan:
 administrator.nonCommercialBanner.form.label.url = URL:
 administrator.nonCommercialBanner.form.label.jingle = Jingle:
 administrator.nonCommercialBanner.form.button.return = Return
-administrator.nonCommercialBanner.form.button.update = Update
-administrator.nonCommercialBanner.form.button.delete = Delete
-administrator.nonCommercialBanner.form.button.create = Create
 
 administrator.nonCommercialBanner.list.label.slogan = Slogan:
 administrator.nonCommercialBanner.list.label.url = URL:
-
-administrator.CommercialBanner.spamWords = Do not write spam words!!!

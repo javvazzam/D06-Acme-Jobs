@@ -28,8 +28,6 @@ master.menu.sign-out = Salir
 master.menu.selector.anonymous = Selector de Anónimo
 master.menu.selector.authenticated = Selector de Autenticado
 master.menu.selector.administrator = Selector de Administrador
-master.menu.selector.consumer = Selector de Consumidor
-master.menu.selector.provider = Selector de Proveedor
 master.menu.selector.employer = Selector de Empleador
 master.menu.selector.worker = Selector de Trabajador
 master.menu.selector.auditor = Selector de Auditor
@@ -89,17 +87,6 @@ master.menu.administrator.list_nonCommercialBanner = Listar banner no comercial
 master.menu.administrator.create_nonCommercialBanner = Crear banner no comercial
 master.menu.administrator.list_auditor_request = Listar solicitudes de auditores
 
-# master.menu.provider ########################################################
-master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
-master.menu.provider.list_solicitud = Listar Solicitudes
-master.menu.provider.create_solicitud = Crear una solicitud
-
-# master.menu.consumer ##########################################################
-master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
-master.menu.consumer.create_offer = Crear una oferta
-
 # master.menu.employer ########################################################
 master.menu.employer.job.list_mine = Listar mis trabajos
 master.menu.employer.application.list_mine = Listar aplicaciones
@@ -121,10 +108,6 @@ master.menu.sponsor.non_comercial_banner.list_mine = Listar mis Banners no Comer
 # master.menu.user-account ####################################################
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
-master.menu.user-account.provider = Datos de proveedor
-master.menu.user-account.become-provider = Hazte proveedor
-master.menu.user-account.consumer = Datos de consumidor
-master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.user-account.employer = Datos de empleador
 master.menu.user-account.become-employer = Hazte empleador
 master.menu.user-account.worker = Datos de trabajador

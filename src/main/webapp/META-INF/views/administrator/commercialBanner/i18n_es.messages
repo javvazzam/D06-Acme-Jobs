@@ -13,11 +13,6 @@ administrator.commercialBanner.form.label.slogan = Eslogan:
 administrator.commercialBanner.form.label.url = Dirección:
 administrator.commercialBanner.form.label.creditCard = Tarjeta de crédito:
 administrator.commercialBanner.form.button.return = Volver
-administrator.commercialBanner.form.button.update = Actualizar
-administrator.commercialBanner.form.button.delete = Eliminar
-administrator.commercialBanner.form.button.create = Crear
 
 administrator.commercialBanner.list.label.slogan = Eslogan:
 administrator.commercialBanner.list.label.url = Dirección:
-
-administrator.CommercialBanner.spamWords = No escribas palabras malsonantes!!!

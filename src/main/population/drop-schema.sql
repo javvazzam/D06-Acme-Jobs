@@ -43,10 +43,6 @@
        drop 
        foreign key FK_q9id3wc65gg49afc5tlr1c00n;
 
-    alter table `consumer` 
-       drop 
-       foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
-
     alter table `duty` 
        drop 
        foreign key `FKs2uoxh4i5ya8ptyefae60iao1`;
@@ -78,10 +74,6 @@
     alter table `participant` 
        drop 
        foreign key `FK67h73ib586xy9hvw4vyy75fvv`;
-
-    alter table `provider` 
-       drop 
-       foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
 
     alter table `sponsor` 
        drop 
@@ -115,8 +107,6 @@
 
     drop table if exists `company`;
 
-    drop table if exists `consumer`;
-
     drop table if exists `customization`;
 
     drop table if exists `duty`;
@@ -134,8 +124,6 @@
     drop table if exists `offer`;
 
     drop table if exists `participant`;
-
-    drop table if exists `provider`;
 
     drop table if exists `shout`;
 
