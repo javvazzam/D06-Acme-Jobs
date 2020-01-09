@@ -14,6 +14,7 @@ package acme.framework.helpers;
 
 import java.io.PrintStream;
 import java.lang.reflect.AccessibleObject;
+import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.Type;
@@ -94,8 +95,10 @@ public class PrinterHelper {
 
 		if (PrinterHelper.isPrimitive(value) || PrinterHelper.isEnum(value)) {
 			PrinterHelper.printPrimitive(buffer, value, summary);
-		} else if (PrinterHelper.isArray(value)) {
-			PrinterHelper.printArray(buffer, (Object[]) value, summary);
+		} else if (PrinterHelper.isObjectArray(value)) {
+			PrinterHelper.printObjectArray(buffer, (Object[]) value, summary);
+		} else if (PrinterHelper.isPrimitiveArray(value)) {
+			PrinterHelper.printPrimitiveArray(buffer, value, summary);
 		} else if (PrinterHelper.isCollection(value)) {
 			PrinterHelper.printCollection(buffer, (Collection<?>) value, summary);
 		} else {
@@ -201,7 +204,7 @@ public class PrinterHelper {
 		buffer.append(right);
 	}
 
-	public static void printArray(final StringBuffer buffer, final Object[] value, final boolean summary) {
+	public static void printObjectArray(final StringBuffer buffer, final Object[] value, final boolean summary) {
 		assert buffer != null;
 		assert value != null;
 
@@ -210,6 +213,30 @@ public class PrinterHelper {
 		separator = "";
 		buffer.append("[");
 		for (final Object item : value) {
+			buffer.append(separator);
+			PrinterHelper.printValue(buffer, item, summary);
+			separator = ", ";
+		}
+		buffer.append("]");
+	}
+
+	public static void printPrimitiveArray(final StringBuffer buffer, final Object value, final boolean summary) {
+		// WARN: note that cannot cast a primitive array like bool[] to Object[].  Thus, we need to get
+		// WARN+ the object as Object, and then do some magic to access its components without attempting to
+		// WARN+ cast value to anything that resembles an array.
+		assert buffer != null;
+		assert value != null;
+		assert PrinterHelper.isPrimitiveArray(value);
+
+		String separator;
+		int length;
+		Object item;
+
+		separator = "";
+		buffer.append("[");
+		length = Array.getLength(value);
+		for (int i = 0; i < length; i++) {
+			item = Array.get(value, i);
 			buffer.append(separator);
 			PrinterHelper.printValue(buffer, item, summary);
 			separator = ", ";
@@ -262,17 +289,35 @@ public class PrinterHelper {
 
 		boolean result;
 
-		result = object == null || object instanceof String || object instanceof Number || object instanceof Character || object instanceof Boolean || object instanceof java.util.Date || object instanceof java.sql.Date || object instanceof Timestamp;
+		result = object == null || // 
+			object instanceof String || object instanceof Number || //
+			object instanceof Character || object instanceof Boolean || //
+			object instanceof java.util.Date || object instanceof java.sql.Date || //
+			object instanceof Timestamp;
 
 		return result;
 	}
 
-	public static boolean isArray(final Object object) {
+	public static boolean isObjectArray(final Object object) {
 		// assert object is nullable
 
 		boolean result;
 
-		result = object != null && object.getClass().getName().charAt(0) == '[';
+		result = object != null && //
+			object.getClass().getName().charAt(0) == '[' && //
+			!object.getClass().getComponentType().isPrimitive();
+
+		return result;
+	}
+
+	public static boolean isPrimitiveArray(final Object object) {
+		// assert object is nullable
+
+		boolean result;
+
+		result = object != null && //
+			object.getClass().getName().charAt(0) == '[' && //
+			object.getClass().getComponentType().isPrimitive();
 
 		return result;
 	}
@@ -302,7 +347,7 @@ public class PrinterHelper {
 
 		boolean result;
 
-		result = PrinterHelper.isPrimitive(object) || PrinterHelper.isArray(object) || PrinterHelper.isEnum(object);
+		result = PrinterHelper.isPrimitive(object) || PrinterHelper.isObjectArray(object) || PrinterHelper.isEnum(object);
 
 		return result;
 	}

@@ -55,7 +55,7 @@ public class Launcher extends SpringBootServletInitializer {
 	@Override
 	public void onStartup(final ServletContext servletContext) throws ServletException {
 		Object attribute;
-		ApplicationContext context;
+		ConfigurableApplicationContext context;
 
 		ProfileHelper.setProfiles("deployment");
 
@@ -63,7 +63,7 @@ public class Launcher extends SpringBootServletInitializer {
 
 		attribute = servletContext.getAttribute(WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE);
 		assert attribute instanceof ApplicationContext;
-		context = (ApplicationContext) attribute;
+		context = (ConfigurableApplicationContext) attribute;
 
 		FactoryHelper.initialise(context);
 

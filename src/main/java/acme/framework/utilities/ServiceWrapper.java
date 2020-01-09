@@ -37,6 +37,7 @@ import acme.framework.services.FindOneMethod;
 import acme.framework.services.InstantiateMethod;
 import acme.framework.services.OnFailureMethod;
 import acme.framework.services.OnSuccessMethod;
+import acme.framework.services.PerformMethod;
 import acme.framework.services.UnbindMethod;
 import acme.framework.services.UpdateMethod;
 import acme.framework.services.ValidateMethod;
@@ -140,6 +141,16 @@ public class ServiceWrapper<R extends UserRole, E> {
 		assert ReflectionHelper.supports(this.service, ValidateMethod.class);
 
 		((ValidateMethod<R, E>) this.service).validate(request, entity, errors);
+	}
+
+	@SuppressWarnings("unchecked")
+	public void perform(final Request<E> request, final E entity, final Errors errors) {
+		assert request != null;
+		assert entity != null;
+		assert errors != null;
+		assert ReflectionHelper.supports(this.service, PerformMethod.class);
+
+		((PerformMethod<R, E>) this.service).perform(request, entity, errors);
 	}
 
 	@SuppressWarnings("unchecked")

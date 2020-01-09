@@ -238,12 +238,6 @@ public abstract class AbstractController<R extends UserRole, E> {
 				break;
 			}
 
-			// HINT: let's build the requested view and let's add some predefined attributes to the model.
-
-			result = this.buildRequestedView(request, response);
-			result.addObject("command", endpoint);
-			result.addObject("principal", request.getPrincipal());
-
 			// HINT: let's commit or rollback the transaction depending on whether there are errors or not in the response.
 			// HINT+ note that the 'onSuccess' and the 'onFailure' methods must be executed in fresh transactions.
 
@@ -258,6 +252,12 @@ public abstract class AbstractController<R extends UserRole, E> {
 				service.onFailure(request, response, null);
 				this.commitTransaction();
 			}
+
+			// HINT: let's build the requested view and let's add some predefined attributes to the model.
+
+			result = this.buildRequestedView(request, response);
+			result.addObject("command", endpoint);
+			result.addObject("principal", request.getPrincipal());
 		} catch (Throwable oops) {
 			// HINT: if a throwable is caught, then the current transaction must be rollbacked, if any,
 			// HINT: the service must execute the 'onFailure' method, and the panic view must be returned.
@@ -307,6 +307,16 @@ public abstract class AbstractController<R extends UserRole, E> {
 			view = this.listViewName;
 			model = new Model();
 			this.unbind(request, list, model, service);
+			errors = new Errors();
+			break;
+		case PERFORM:
+			// HINT: a PERFORM request using the 'GET' method is served as follows: a) instantiate the query
+			// HINT+ parameters; b) unbind them into a fresh model.  Note that no errors are expected, but
+			// HINT+ exceptions might be thrown.
+			entity = service.instantiate(request);
+			view = this.formViewName;
+			model = new Model();
+			service.unbind(request, entity, model);
 			errors = new Errors();
 			break;
 		case SHOW:
@@ -359,15 +369,20 @@ public abstract class AbstractController<R extends UserRole, E> {
 		Model model;
 		Errors errors;
 
-		// HINT: handling a POST request requires two independent steps.
+		// HINT: some initialisation.
 
-		// HINT: the first step fetches the entity to be handled.
+		view = null;
+		model = null;
+		errors = null;
+
+		// HINT: the first step to handle a POST request fetches the entity to be handled.
 
 		entity = null;
-
 		switch (request.getBaseCommand()) {
+		case PERFORM:
 		case CREATE:
-			// HINT: a CREATE request involves instantiating the appropriate entity from the request.
+			// HINT: a PERFORM or CREATE request involves instantiating the appropriate entity from the
+			// HINT+ request.
 			entity = service.instantiate(request);
 			break;
 		case UPDATE:
@@ -379,16 +394,32 @@ public abstract class AbstractController<R extends UserRole, E> {
 			Assert.state(false, request.getLocale(), "default.error.endpoint-unavailable");
 			break;
 		}
-
 		assert entity != null;
 
 		// HINT: the second step cares of performing the command on the entity fetched by the previous step.
 
+		model = new Model();
 		errors = new Errors();
 		switch (request.getBaseCommand()) {
+		case PERFORM:
+			// HINT: dealing with a PERFORM request involves the following steps: a) binding the request onto
+			// HINT+ the entity instantiated by the previous step; b) performing constraint validation on it;
+			// HINT+ c) performing user-defined validation; d) invoking the service to perform the query if
+			// HINT+ if there are not any errors; and e) unbinding the result to the output model if there
+			// HINT+ are not any errors.
+			service.bind(request, entity, errors);
+			ValidationHelper.validate(request, entity, errors);
+			service.validate(request, entity, errors);
+			if (!errors.hasErrors()) {
+				service.perform(request, entity, errors);
+			}
+			if (!errors.hasErrors()) {
+				service.unbind(request, entity, model);
+			}
+			break;
 		case CREATE:
 			// HINT: dealing with a CREATE request involves the following steps: a) binding the request onto
-			// HINT+ the entity fetched by the previous step; b) performing contraint validation on it;
+			// HINT+ the entity instantiated by the previous step; b) performing constraint validation on it;
 			// HINT+ c) performing user-defined validation; d) if there are not any errors, then invoking the
 			// HINT+ service to create the entity.
 			service.bind(request, entity, errors);
@@ -400,7 +431,7 @@ public abstract class AbstractController<R extends UserRole, E> {
 			break;
 		case UPDATE:
 			// HINT: dealing with an UPDATE request involves the following steps: a) binding the request onto
-			// HINT+ the entity fetched by the previous step; b) performing contraint validation on it;
+			// HINT+ the entity fetched by the previous step; b) performing constraint validation on it;
 			// HINT+ c) performing user-defined validation; d) if there are not any errors, then invoking the
 			// HINT+ service to update the entity.
 			service.bind(request, entity, errors);
@@ -423,20 +454,31 @@ public abstract class AbstractController<R extends UserRole, E> {
 			break;
 		}
 
-		if (!errors.hasErrors()) {
-			// HINT: if there aren't any errors, then we must redirect to the referrer view, which cares of
-			// HINT+ returning to the apropriate listing or /master/welcome.
-			view = "redirect:/master/referrer";
-			model = new Model();
-		} else {
-			// HINT: if there are some errors, then we must redirect to the same view using the same model, so
-			// HINT+ that the user may make changes and submit the form again.
+		assert model != null;
+		assert errors != null;
+
+		if (request.getBaseCommand().equals(BasicCommand.PERFORM)) {
+			// HINT: if we're dealing with a PERFORM request, then we return the same view and
+			// HINT+ reset the model if there are any errors.
 			view = this.formViewName;
-			model = new Model();
-			model.append(request.getModel());
+			if (errors.hasErrors()) {
+				model.append(request.getModel());
+			}
+		} else {
+			if (!errors.hasErrors() && !request.getBaseCommand().equals(BasicCommand.PERFORM)) {
+				// HINT: if there aren't any errors, then we must redirect to the referrer view, which cares of
+				// HINT+ returning to the appropriate listing or /master/welcome.
+				view = "redirect:/master/referrer";
+			} else {
+				// HINT: if there are some errors, then we must redirect to the same view.  The model
+				// HINT+ is the same, so that the user may make changes and submit the form again.
+				view = this.formViewName;
+				model.append(request.getModel());
+			}
 		}
 
-		// HINT: unless an exception is thrown, the previous statements must produce a view name, a model, and an errors object.
+		// HINT: unless an exception is thrown, the previous statements must produce a view name, a model,
+		// HINT+ and an errors object.
 
 		assert !StringHelper.isBlank(view);
 		assert model != null;

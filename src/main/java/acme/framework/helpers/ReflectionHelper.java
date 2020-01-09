@@ -65,6 +65,17 @@ public class ReflectionHelper {
 		return result;
 	}
 
+	public static boolean assignable(final Class<?> sourceClazz, final Class<?> targetClazz) {
+		assert sourceClazz != null;
+		assert targetClazz != null;
+
+		boolean result;
+
+		result = targetClazz.isAssignableFrom(sourceClazz);
+
+		return result;
+	}
+
 	public static boolean existsClass(final String name, final Class<?> base) {
 		assert !StringHelper.isBlank(name);
 		assert base != null;

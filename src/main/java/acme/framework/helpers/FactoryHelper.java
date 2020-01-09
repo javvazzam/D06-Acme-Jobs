@@ -15,9 +15,10 @@ package acme.framework.helpers;
 import javax.persistence.EntityManager;
 
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.MessageSource;
-import org.springframework.core.convert.ConversionService;
+import org.springframework.core.convert.support.ConfigurableConversionService;
+import org.springframework.format.support.FormattingConversionService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.validation.Validator;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
@@ -29,36 +30,36 @@ public class FactoryHelper {
 	// Internal methods -------------------------------------------------------
 
 	@Getter
-	private static ApplicationContext			context;
+	private static ConfigurableApplicationContext	context;
 
 	@Getter
-	private static MessageSource				messageSource;
+	private static MessageSource					messageSource;
 
 	@Getter
-	private static ConversionService			conversionService;
+	private static ConfigurableConversionService	conversionService;
 
 	@Getter
-	private static Validator					validator;
+	private static Validator						validator;
 
 	@Getter
-	private static PasswordEncoder				passwordEncoder;
+	private static PasswordEncoder					passwordEncoder;
 
 	@Getter
-	private static EntityManager				entityManager;
+	private static EntityManager					entityManager;
 
-	private static AutowireCapableBeanFactory	autowiringFactory;
+	private static AutowireCapableBeanFactory		autowiringFactory;
 
 
 	// Constructors -----------------------------------------------------------
 
-	public static void initialise(final ApplicationContext context) {
+	public static void initialise(final ConfigurableApplicationContext context) {
 		assert context != null;
 		assert !FactoryHelper.isInitialised();
 
 		FactoryHelper.context = context;
 		FactoryHelper.autowiringFactory = context.getAutowireCapableBeanFactory();
 		FactoryHelper.messageSource = context.getBean(MessageSource.class);
-		FactoryHelper.conversionService = (ConversionService) context.getBean("conversionService");
+		FactoryHelper.conversionService = context.getBean(FormattingConversionService.class);
 		FactoryHelper.validator = context.getBean(LocalValidatorFactoryBean.class);
 		FactoryHelper.passwordEncoder = context.getBean(PasswordEncoder.class);
 		FactoryHelper.entityManager = context.getBean(EntityManager.class);
@@ -66,7 +67,7 @@ public class FactoryHelper {
 
 	// Business methods -------------------------------------------------------
 
-	private static boolean isInitialised() {
+	public static boolean isInitialised() {
 		boolean result;
 
 		result = FactoryHelper.context != null;
