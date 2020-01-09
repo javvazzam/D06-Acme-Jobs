@@ -28,8 +28,6 @@ master.menu.sign-out = Sign out
 master.menu.selector.anonymous = Anonymous's Selector
 master.menu.selector.authenticated = Authenticated's Selector 
 master.menu.selector.administrator = Administrator's Selector
-master.menu.selector.consumer = Consumer's Selector
-master.menu.selector.provider = Provider's Selector
 master.menu.selector.employer = Employer's Selector
 master.menu.selector.worker = Worker's Selector
 master.menu.selector.auditor = Auditor's Selector
@@ -87,17 +85,6 @@ master.menu.administrator.list_nonCommercialBanner = List non-commercial banner
 master.menu.administrator.create_nonCommercialBanner = Create non-commercial banner
 master.menu.administrator.list_auditor_request = List auditors' request
 
-# master.menu.provider #######################################################
-master.menu.provider = Provider
-master.menu.provider.favourite-link = Favourite link
-master.menu.provider.list_solicitud = List Requests
-master.menu.provider.create_solicitud = Create a request
-
-# master.menu.consumer #######################################################
-master.menu.consumer = Consumer
-master.menu.consumer.favourite-link = Favourite link
-master.menu.consumer.create_offer = Create an offer
-
 # master.menu.employer ########################################################
 master.menu.employer.job.list_mine = List my jobs
 master.menu.employer.application.list_mine = List applications
@@ -119,10 +106,6 @@ master.menu.sponsor.non_comercial_banner.list_mine = List my Non Commercial Bane
 # master.menu.user-account ####################################################
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
-master.menu.user-account.provider = Provider data
-master.menu.user-account.become-provider = Become a provider
-master.menu.user-account.consumer = Consumer data
-master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.employer = Employer data
 master.menu.user-account.become-employer = Become an employer
 master.menu.user-account.worker = Worker data

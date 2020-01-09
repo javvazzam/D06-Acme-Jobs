@@ -20,17 +20,6 @@
 	<acme:form-textbox code="administrator.nonCommercialBanner.form.label.slogan" path="slogan"/>
 	<acme:form-url code="administrator.nonCommercialBanner.form.label.url" path="url"/>
 	<acme:form-textbox code="administrator.nonCommercialBanner.form.label.jingle" path="jingle"/>
-	
-	<!-- Botones -->
-	<acme:form-submit test="${command == 'show'}" code="administrator.nonCommercialBanner.form.button.update"
-		action="/administrator/non-commercial-banner/update"/>
-	<acme:form-submit test="${command == 'show'}" code="administrator.nonCommercialBanner.form.button.delete"
-		action="/administrator/non-commercial-banner/delete"/>
-	<acme:form-submit test="${command == 'create'}" code="administrator.nonCommercialBanner.form.button.create"
-		action="/administrator/non-commercial-banner/create"/>
-	<acme:form-submit test="${command == 'update'}" code="administrator.nonCommercialBanner.form.button.update"
-		action="/administrator/non-commercial-banner/update"/>
-	<acme:form-submit test="${command == 'delete'}" code="administrator.commercialBanner.form.button.delete"
-		action="/administrator/non-commercial-banner/delete"/>
+
   	<acme:form-return code="administrator.nonCommercialBanner.form.button.return"/>
 </acme:form>

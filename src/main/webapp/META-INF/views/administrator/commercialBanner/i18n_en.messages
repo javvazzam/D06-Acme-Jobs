@@ -14,11 +14,6 @@ administrator.commercialBanner.form.label.slogan = Slogan:
 administrator.commercialBanner.form.label.url = URL:
 administrator.commercialBanner.form.label.creditCard = Credit Card:
 administrator.commercialBanner.form.button.return = Return
-administrator.commercialBanner.form.button.update = Update
-administrator.commercialBanner.form.button.delete = Delete
-administrator.commercialBanner.form.button.create = Create
 
 administrator.commercialBanner.list.label.slogan = Slogan:
 administrator.commercialBanner.list.label.url = URL:
-
-administrator.CommercialBanner.spamWords = Do not write spam words!!!
