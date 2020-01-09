@@ -1,5 +1,5 @@
 /*
- * MvcConfiguration.java
+ * ConversionConfiguration.java
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -12,10 +12,8 @@
 
 package acme.framework.configuration;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.format.support.DefaultFormattingConversionService;
-import org.springframework.format.support.FormattingConversionService;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import acme.framework.utilities.LocalisedDateFormatter;
@@ -27,25 +25,20 @@ public class ConversionConfiguration implements WebMvcConfigurer {
 
 	// Beans ------------------------------------------------------------------
 
-	@Bean
-	public FormattingConversionService conversionService() {
-		DefaultFormattingConversionService result;
+	@Override
+	public void addFormatters(final FormatterRegistry registry) {
 		LocalisedDateFormatter dateFormatter;
 		LocalisedMoneyFormatter moneyFormatter;
 		LocalisedDoubleFormatter doubleFormatter;
 
-		result = new DefaultFormattingConversionService(true);
-
 		dateFormatter = new LocalisedDateFormatter();
-		result.addFormatter(dateFormatter);
+		registry.addFormatter(dateFormatter);
 
 		moneyFormatter = new LocalisedMoneyFormatter();
-		result.addFormatter(moneyFormatter);
+		registry.addFormatter(moneyFormatter);
 
 		doubleFormatter = new LocalisedDoubleFormatter();
-		result.addFormatter(doubleFormatter);
-
-		return result;
+		registry.addFormatter(doubleFormatter);
 	}
 
 }

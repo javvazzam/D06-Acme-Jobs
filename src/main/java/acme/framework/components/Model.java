@@ -115,16 +115,28 @@ public class Model {
 		return result;
 	}
 
-	private <T> T getAttribute(final String name, final Class<T> clazz) {
+	public boolean canConvert(final String name, final Class<?> clazz) {
 		assert !StringHelper.isBlank(name);
 		assert clazz != null;
-		assert this.hasAttribute(name);
+
+		boolean result;
+		Object value;
+
+		value = this.current.get(name);
+		result = value == null || ConversionHelper.canConvert(value, clazz);
+
+		return result;
+	}
+
+	public <T> T getAttribute(final String name, final Class<T> clazz) {
+		assert !StringHelper.isBlank(name);
+		assert clazz != null;
+		assert this.hasAttribute(name) && this.canConvert(name, clazz);
 
 		T result;
 		Object value;
 
 		value = this.current.get(name);
-		assert value == null || ConversionHelper.canConvert(value, clazz);
 		result = ConversionHelper.convert(value, clazz);
 
 		return result;

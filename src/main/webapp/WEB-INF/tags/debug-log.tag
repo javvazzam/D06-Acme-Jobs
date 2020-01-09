@@ -11,7 +11,7 @@
 --%>
 
 <%@tag language="java" body-content="empty" 
-	   import="org.apache.commons.logging.Log,org.apache.commons.logging.LogFactory" %>
+	   import="org.apache.commons.logging.Log, org.apache.commons.logging.LogFactory" %>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>

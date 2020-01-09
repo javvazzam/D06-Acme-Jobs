@@ -8,6 +8,3 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-- It makes sense to rename DomainEntity as AbstractEntity and DomainDatatype as AbstractDatatype.
-- It makes sense to provide an AbstractFormObject base class for form objects. 
-- URL input boxes should allow to jump to the URL.

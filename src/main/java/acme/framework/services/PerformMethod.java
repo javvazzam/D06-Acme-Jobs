@@ -1,5 +1,5 @@
 /*
- * BasicCommand.java
+ * PerformMethod.java
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -10,8 +10,18 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.framework.components;
+package acme.framework.services;
 
-public enum BasicCommand implements Command {
-	LIST, SHOW, PERFORM, CREATE, UPDATE, DELETE
+import javax.transaction.Transactional;
+import javax.transaction.Transactional.TxType;
+
+import acme.framework.components.Errors;
+import acme.framework.components.Request;
+import acme.framework.entities.UserRole;
+
+@Transactional(TxType.MANDATORY)
+public interface PerformMethod<R extends UserRole, E> {
+
+	void perform(final Request<E> request, final E entity, final Errors errors);
+
 }

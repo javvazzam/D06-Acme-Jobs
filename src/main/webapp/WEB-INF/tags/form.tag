@@ -29,7 +29,7 @@
 </jstl:if>
 
 <form id="form" method="post" action="javascript: form.action = getAbsoluteUrl('${action}')">
-	<acme:form-errors path="model"/>
+	<acme:form-errors path="*"/>
 	<acme:form-hidden path="id"/>
 	<acme:form-hidden path="version"/>
 	<jsp:doBody/>

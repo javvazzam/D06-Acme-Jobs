@@ -19,6 +19,7 @@ import javax.transaction.Transactional.TxType;
 
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.authentication.RememberMeAuthenticationToken;
+import org.springframework.security.authentication.TestingAuthenticationToken;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -57,9 +58,14 @@ public class PrincipalHelper {
 
 		context = SecurityContextHolder.getContext();
 		authentication = context.getAuthentication();
-		assert authentication instanceof RememberMeAuthenticationToken || authentication instanceof UsernamePasswordAuthenticationToken || authentication instanceof AnonymousAuthenticationToken;
+		assert authentication instanceof RememberMeAuthenticationToken || //
+			authentication instanceof UsernamePasswordAuthenticationToken || //
+			authentication instanceof TestingAuthenticationToken || //
+			authentication instanceof AnonymousAuthenticationToken;
 
-		if (authentication instanceof RememberMeAuthenticationToken || authentication instanceof UsernamePasswordAuthenticationToken) {
+		if (authentication instanceof RememberMeAuthenticationToken || //
+			authentication instanceof UsernamePasswordAuthenticationToken || //
+			authentication instanceof TestingAuthenticationToken) {
 			result = (Principal) authentication.getPrincipal();
 		} else {
 			result = (Principal) PrincipalHelper.authenticationService.loadUserByUsername("anonymous");
