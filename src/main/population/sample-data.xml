@@ -1120,48 +1120,50 @@
 	<!-- Non-commercial Banner's bean -->
 
 	<bean id="nonCommercialBanner01" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
-		<property name="picture" value="https://miro.medium.com/max/1024/1*vxjAHkrXbGG6gOiPZgjeZA.jpeg" />
-		<property name="slogan" value="Conocimiento es poder" />
-		<property name="url" value="https://neoattack.com/" />
-		<property name="jingle" value="https://neoattack.com/" />
+		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
+		<property name="slogan" value="Slogan 1" />
+		<property name="url" value="https://i.imgur.com/8YcXhS0.png" />
+		<property name="jingle" value="https://i.imgur.com/8YcXhS0.png" />
 		<property name="sponsor" ref="sponsor2Sponsor" />
 	</bean>
 	<bean id="nonCommercialBanner02" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
-		<property name="picture" value="https://media.istockphoto.com/illustrations/wind-icon-illustration-id912304034" />
-		<property name="slogan" value="wild is the wind" />
-		<property name="url" value="https://www.tiempo.com/montequinto.htm" />
+		<property name="picture" value="https://i.imgur.com/2eVF1HG.png" />
+		<property name="slogan" value="Slogan 2" />
+		<property name="url" value="https://i.imgur.com/2eVF1HG.png" />
 		<property name="jingle">
 			<null />
 		</property>
 		<property name="sponsor" ref="sponsor2Sponsor" />
 	</bean>
 	<bean id="nonCommercialBanner03" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
-		<property name="picture" value="http://expertolaboralonline.jpg" />
-		<property name="slogan" value="Sundays means no work" />
-		<property name="url" value="https://m.media-amazon.com" />
+		<property name="picture" value="https://i.imgur.com/MtBRoNP.png" />
+		<property name="slogan" value="Slogan 3" />
+		<property name="url" value="https://i.imgur.com/MtBRoNP.png" />
 		<property name="jingle">
 			<null />
 		</property>
 		<property name="sponsor" ref="sponsor2Sponsor" />
 	</bean>
 	<bean id="nonCommercialBanner04" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
-		<property name="picture" value="http://masdatos.jpg" />
-		<property name="slogan" value="Repeticion1!" />
-		<property name="url" value="https://arepetirdatos.com" />
+		<property name="picture" value="https://i.imgur.com/NGLSjk6.png" />
+		<property name="slogan" value="Slogan 4" />
+		<property name="url" value="https://i.imgur.com/NGLSjk6.png" />
 		<property name="jingle">
 			<null />
 		</property>
 		<property name="sponsor" ref="sponsor2Sponsor" />
 	</bean>
 	<bean id="nonCommercialBanner05" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
-		<property name="picture" value="http://iteracion.jpg" />
-		<property name="slogan" value="Repeticion2!" />
-		<property name="url" value="https://iteraciondedatos.com" />
+		<property name="picture" value="https://i.imgur.com/fihihcF.png" />
+		<property name="slogan" value="Slogan 5" />
+		<property name="url" value="https://i.imgur.com/fihihcF.png" />
 		<property name="jingle">
 			<null />
 		</property>
 		<property name="sponsor" ref="sponsor4Sponsor" />
 	</bean>
+	
+	<!-- 
 	<bean id="nonCommercialBanner06" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
 		<property name="picture" value="http://otroejemplo.jpg" />
 		<property name="slogan" value="Repeticion3!" />
@@ -1180,7 +1182,8 @@
 		</property>
 		<property name="sponsor" ref="sponsor4Sponsor" />
 	</bean>
-
+	 -->
+	 
 	<!-- Auditors -->
 	<bean name="auditor1UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="auditor1" />
