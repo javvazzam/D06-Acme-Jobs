@@ -22,12 +22,10 @@ import org.hibernate.validator.constraints.Range;
 import acme.framework.datatypes.DomainDatatype;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 @Embeddable
 @Getter
 @Setter
-@ToString
 public class Phone extends DomainDatatype {
 
 	// Serialisation identifier -----------------------------------------------
@@ -49,4 +47,25 @@ public class Phone extends DomainDatatype {
 
 	// Derived attributes -----------------------------------------------------
 
+
+	// Object interface -------------------------------------------------------
+	@Override
+	public String toString() {
+		StringBuilder result;
+
+		result = new StringBuilder();
+		result.append("<<+");
+		result.append(this.countryCode);
+		if (this.areaCode == null) {
+			result.append(" ");
+		} else {
+			result.append(" (");
+			result.append(this.areaCode);
+			result.append(") ");
+		}
+		result.append(this.number);
+		result.append(">>");
+
+		return result.toString();
+	}
 }

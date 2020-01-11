@@ -15,6 +15,7 @@ anonymous.user-account.label.password = Contraseña:
 anonymous.user-account.label.confirmation = Confirmación:
 anonymous.user-account.label.name = Nombre:
 anonymous.user-account.label.surname = Apellidos:
+anonymous.user-account.form.label.phone = Teléfono:
 anonymous.user-account.label.email = E-mail:
 anonymous.user-account.label.accept = Acepto la licencia
 

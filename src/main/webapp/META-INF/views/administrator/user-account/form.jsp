@@ -19,6 +19,7 @@
 	<acme:form-textbox code="administrator.user-account.form.label.username" path="username" readonly="true"/>
 	<acme:form-textbox code="administrator.user-account.form.label.name" path="identity.name" readonly="true"/>
 	<acme:form-textbox code="administrator.user-account.form.label.surname" path="identity.surname" readonly="true"/>
+	<acme:form-phone code="administrator.user-account.form.label.phone" path="identity.phone" readonly="true"/>	
 	<acme:form-textbox code="administrator.user-account.form.label.email" path="identity.email" readonly="true"/>
 	<acme:form-textbox code="administrator.user-account.form.label.role-list" path="roleList" readonly="true"/>
 	<acme:form-textbox code="administrator.user-account.form.label.status" path="status" readonly="true"/>

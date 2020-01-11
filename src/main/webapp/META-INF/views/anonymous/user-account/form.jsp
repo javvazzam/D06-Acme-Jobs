@@ -22,6 +22,7 @@
 	
 	<acme:form-textbox code="anonymous.user-account.label.name" path="identity.name"/>
 	<acme:form-textbox code="anonymous.user-account.label.surname" path="identity.surname"/>
+	<acme:form-phone code="anonymous.user-account.form.label.phone" path="identity.phone"/>
 	<acme:form-textbox code="anonymous.user-account.label.email" path="identity.email"/>
 	 
 	<acme:form-checkbox code="anonymous.user-account.label.accept" path="accept"/>
