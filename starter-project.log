@@ -61,3 +61,115 @@ org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.ja
 org.apache.jsp.tag.web.print_tag.doTag(print_tag.java:168): org.springframework.core.convert.ConversionFailedException: Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value 'Phone(countryCode=44, areaCode=(0), number=123-456)'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
 org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47): Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value 'Phone(countryCode=44, areaCode=(0), number=123-456)'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
 java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP POST /acme-jobs/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:200): Request method 'POST' not supported
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[jsp]] at java.util.Formatter$FormatSpecifier.conversion(Unknown Source): Conversion = 'l'
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../authenticated/user-account/form.jsp'.
+at org.apache.jsp.tag.web.print_tag.doTag(print_tag.java:168): org.springframework.core.convert.ConversionFailedException: Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+1 456987>>'; nested exception is java.util.UnknownFormatConversionException: Conversion = 'l'
+at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47): Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+1 456987>>'; nested exception is java.util.UnknownFormatConversionException: Conversion = 'l'
+at java.util.Formatter$FormatSpecifier.conversion(Unknown Source): Conversion = 'l'
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[dispatcherServlet]] at java.util.Formatter$FormatSpecifier.conversion(Unknown Source): Conversion = 'l'
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/master/panic HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1013): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.jsp.tag.web.print_tag.doTag(print_tag.java:168): org.springframework.core.convert.ConversionFailedException: Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+1 456987>>'; nested exception is java.util.UnknownFormatConversionException: Conversion = 'l'
+org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47): Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+1 456987>>'; nested exception is java.util.UnknownFormatConversionException: Conversion = 'l'
+java.util.Formatter$FormatSpecifier.conversion(Unknown Source): Conversion = 'l'
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[jsp]] at java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../authenticated/user-account/form.jsp'.
+at org.apache.jsp.tag.web.print_tag.doTag(print_tag.java:168): org.springframework.core.convert.ConversionFailedException: Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
+at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47): Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
+at java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[dispatcherServlet]] at java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/master/panic HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1013): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.jsp.tag.web.print_tag.doTag(print_tag.java:168): org.springframework.core.convert.ConversionFailedException: Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
+org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47): Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
+java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[dispatcherServlet]] at acme.framework.utilities.RememberMeLogoutHandler.logout(RememberMeLogoutHandler.java:31): java.lang.AssertionError
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:200): Filter execution threw an exception
+java.lang.AssertionError
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[jsp]] at java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../authenticated/user-account/form.jsp'.
+at org.apache.jsp.tag.web.print_tag.doTag(print_tag.java:168): org.springframework.core.convert.ConversionFailedException: Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
+at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47): Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
+at java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[dispatcherServlet]] at java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/master/panic HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1013): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.jsp.tag.web.print_tag.doTag(print_tag.java:168): org.springframework.core.convert.ConversionFailedException: Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
+org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47): Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
+java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[jsp]] at java.util.Formatter$FormatSpecifier.conversion(Unknown Source): Conversion = 'l'
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../authenticated/user-account/form.jsp'.
+at org.apache.jsp.tag.web.print_tag.doTag(print_tag.java:168): org.springframework.core.convert.ConversionFailedException: Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.UnknownFormatConversionException: Conversion = 'l'
+at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47): Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.UnknownFormatConversionException: Conversion = 'l'
+at java.util.Formatter$FormatSpecifier.conversion(Unknown Source): Conversion = 'l'
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[dispatcherServlet]] at java.util.Formatter$FormatSpecifier.conversion(Unknown Source): Conversion = 'l'
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/master/panic HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1013): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.jsp.tag.web.print_tag.doTag(print_tag.java:168): org.springframework.core.convert.ConversionFailedException: Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.UnknownFormatConversionException: Conversion = 'l'
+org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47): Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.UnknownFormatConversionException: Conversion = 'l'
+java.util.Formatter$FormatSpecifier.conversion(Unknown Source): Conversion = 'l'
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[jsp]] at java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../authenticated/user-account/form.jsp'.
+at org.apache.jsp.tag.web.print_tag.doTag(print_tag.java:168): org.springframework.core.convert.ConversionFailedException: Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
+at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47): Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
+at java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[dispatcherServlet]] at java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/master/panic HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1013): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.jsp.tag.web.print_tag.doTag(print_tag.java:168): org.springframework.core.convert.ConversionFailedException: Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
+org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47): Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
+java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[jsp]] at java.util.Formatter$FormatSpecifier.conversion(Unknown Source): Conversion = 'l'
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../authenticated/user-account/form.jsp'.
+at org.apache.jsp.tag.web.print_tag.doTag(print_tag.java:168): org.springframework.core.convert.ConversionFailedException: Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.UnknownFormatConversionException: Conversion = 'l'
+at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47): Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.UnknownFormatConversionException: Conversion = 'l'
+at java.util.Formatter$FormatSpecifier.conversion(Unknown Source): Conversion = 'l'
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[dispatcherServlet]] at java.util.Formatter$FormatSpecifier.conversion(Unknown Source): Conversion = 'l'
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/master/panic HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1013): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.jsp.tag.web.print_tag.doTag(print_tag.java:168): org.springframework.core.convert.ConversionFailedException: Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.UnknownFormatConversionException: Conversion = 'l'
+org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47): Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.UnknownFormatConversionException: Conversion = 'l'
+java.util.Formatter$FormatSpecifier.conversion(Unknown Source): Conversion = 'l'
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[jsp]] at java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[jsp]] at org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../authenticated/user-account/form.jsp'.
+at org.apache.jsp.tag.web.print_tag.doTag(print_tag.java:168): org.springframework.core.convert.ConversionFailedException: Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
+at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47): Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
+at java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/acme-jobs].[dispatcherServlet]] at java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/master/panic HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1013): Request processing failed; nested exception is org.apache.tiles.request.render.CannotRenderException: JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.tiles.impl.BasicTilesContainer.render(BasicTilesContainer.java:399): JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.java:61): JSPException including path '../authenticated/user-account/form.jsp'.
+org.apache.jsp.tag.web.print_tag.doTag(print_tag.java:168): org.springframework.core.convert.ConversionFailedException: Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
+org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47): Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
+java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String

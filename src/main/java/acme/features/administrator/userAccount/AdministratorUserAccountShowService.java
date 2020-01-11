@@ -53,7 +53,7 @@ public class AdministratorUserAccountShowService implements AbstractShowService<
 		StringBuilder buffer;
 		Collection<UserRole> roles;
 
-		request.unbind(entity, model, "username", "identity.name", "identity.surname", "identity.email");
+		request.unbind(entity, model, "username", "identity.name", "identity.surname", "identity.email", "identity.phone");
 
 		roles = entity.getRoles();
 		buffer = new StringBuilder();

@@ -21,15 +21,18 @@
 				<property name="name" value="Authenticated" />
 				<property name="surname" value="User" />
 				<property name="email" value="authenticated@acme.com" />
-				<property name="phone">
+				<property name="phone" value="+44 (54) 325-698"/>
+				<!-- 
 					<bean class="acme.datatypes.Phone">
 						<property name="countryCode" value="+44" />
-						<property name="areaCode" value="(0)" />
+						<property name="areaCode" value="0" />
 						<property name="number" value="123-456" />
 					</bean>
 				</property>
+			-->
 			</bean>
 		</property>
+		
 		<property name="roles">
 			<list>
 				<ref bean="authenticated1Authenticated" />
@@ -50,14 +53,15 @@
 				<property name="name" value="Authenticated2" />
 				<property name="surname" value="User2" />
 				<property name="email" value="authenticated2@acme.com" />
-				<property name="phone">
+				<property name="phone" value="+1 123456"/>				
+<!-- 				<property name="phone">
 					<bean class="acme.datatypes.Phone">
 						<property name="countryCode" value="+44" />
-						<property name="areaCode" value="(0)" />
+						<property name="areaCode" value="0" />
 						<property name="number" value="123-456" />
 					</bean>
 				</property>
-			</bean>
+ -->			</bean>
 		</property>
 		<property name="roles">
 			<list>
@@ -79,13 +83,15 @@
 				<property name="name" value="Authenticated3" />
 				<property name="surname" value="User3" />
 				<property name="email" value="authenticated3@acme.com" />
-				<property name="phone">
+				<property name="phone" value="+34 123 456 789"/>				
+<!-- 				<property name="phone">
 					<bean class="acme.datatypes.Phone">
 						<property name="countryCode" value="+44" />
-						<property name="areaCode" value="(0)" />
+						<property name="areaCode" value="0" />
 						<property name="number" value="123-456" />
 					</bean>
 				</property>
+				 -->
 			</bean>
 		</property>
 		<property name="roles">
