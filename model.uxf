@@ -28,6 +28,7 @@ UserIdentity
 --
 + name: String {NotBlank}
 + surname: String {♫NotBlank}
++ phone: Phone
 + email: String {NotBlank, Email}
 + / fullName: String {NotBlank}
 

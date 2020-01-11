@@ -56,7 +56,7 @@ public class AnonymousUserAccountCreateService implements AbstractCreateService<
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "username", "identity.name", "identity.surname", "identity.email");
+		request.unbind(entity, model, "username", "identity.name", "identity.surname", "identity.email", "identity.phone");
 
 		if (request.isMethod(HttpMethod.GET)) {
 			model.setAttribute("password", "");

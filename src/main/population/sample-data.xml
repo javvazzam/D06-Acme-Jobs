@@ -21,6 +21,13 @@
 				<property name="name" value="Authenticated" />
 				<property name="surname" value="User" />
 				<property name="email" value="authenticated@acme.com" />
+				<property name="phone">
+					<bean class="acme.datatypes.Phone">
+						<property name="countryCode" value="+44" />
+						<property name="areaCode" value="(0)" />
+						<property name="number" value="123-456" />
+					</bean>
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -43,6 +50,13 @@
 				<property name="name" value="Authenticated2" />
 				<property name="surname" value="User2" />
 				<property name="email" value="authenticated2@acme.com" />
+				<property name="phone">
+					<bean class="acme.datatypes.Phone">
+						<property name="countryCode" value="+44" />
+						<property name="areaCode" value="(0)" />
+						<property name="number" value="123-456" />
+					</bean>
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -65,6 +79,13 @@
 				<property name="name" value="Authenticated3" />
 				<property name="surname" value="User3" />
 				<property name="email" value="authenticated3@acme.com" />
+				<property name="phone">
+					<bean class="acme.datatypes.Phone">
+						<property name="countryCode" value="+44" />
+						<property name="areaCode" value="(0)" />
+						<property name="number" value="123-456" />
+					</bean>
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -1162,28 +1183,14 @@
 		</property>
 		<property name="sponsor" ref="sponsor4Sponsor" />
 	</bean>
-	
-	<!-- 
-	<bean id="nonCommercialBanner06" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
-		<property name="picture" value="http://otroejemplo.jpg" />
-		<property name="slogan" value="Repeticion3!" />
-		<property name="url" value="https://ejemplos.com" />
-		<property name="jingle">
-			<null />
-		</property>
-		<property name="sponsor" ref="sponsor4Sponsor" />
-	</bean>
-	<bean id="nonCommercialBanner07" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
-		<property name="picture" value="http://estamosañadiendodatosparaiterar.jpg" />
-		<property name="slogan" value="Repeticion4!" />
-		<property name="url" value="https://yesteesotrodatomas.com" />
-		<property name="jingle">
-			<null />
-		</property>
-		<property name="sponsor" ref="sponsor4Sponsor" />
-	</bean>
-	 -->
-	 
+
+	<!-- <bean id="nonCommercialBanner06" class="acme.entities.nonCommercialBanners.NonCommercialBanner"> <property name="picture" value="http://otroejemplo.jpg" 
+		/> <property name="slogan" value="Repeticion3!" /> <property name="url" value="https://ejemplos.com" /> <property name="jingle"> <null 
+		/> </property> <property name="sponsor" ref="sponsor4Sponsor" /> </bean> <bean id="nonCommercialBanner07" class="acme.entities.nonCommercialBanners.NonCommercialBanner"> 
+		<property name="picture" value="http://estamosañadiendodatosparaiterar.jpg" /> <property name="slogan" value="Repeticion4!" /> <property 
+		name="url" value="https://yesteesotrodatomas.com" /> <property name="jingle"> <null /> </property> <property name="sponsor" ref="sponsor4Sponsor" 
+		/> </bean> -->
+
 	<!-- Auditors -->
 	<bean name="auditor1UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="auditor1" />
@@ -1857,7 +1864,7 @@
 		<property name="worker" ref="worker4Worker" />
 		<property name="job" ref="job3" />
 	</bean>
-	
+
 	<bean name="application13" class="acme.entities.applications.Application">
 		<property name="reference" value="EEEA-JJJA:WWWB" />
 		<property name="moment" value="2020/01/08 01:00" />
@@ -1871,7 +1878,7 @@
 		<property name="worker" ref="worker2Worker" />
 		<property name="job" ref="job1" />
 	</bean>
-	
+
 	<bean name="application14" class="acme.entities.applications.Application">
 		<property name="reference" value="EEEB-JJJB:WWWB" />
 		<property name="moment" value="2019/11/25 01:00" />
@@ -1885,7 +1892,7 @@
 		<property name="worker" ref="worker2Worker" />
 		<property name="job" ref="job2" />
 	</bean>
-	
+
 	<bean name="application15" class="acme.entities.applications.Application">
 		<property name="reference" value="EEEA-JJJE:WWWE" />
 		<property name="moment" value="2019/11/28 01:00" />
@@ -1899,7 +1906,7 @@
 		<property name="worker" ref="worker5Worker" />
 		<property name="job" ref="job5" />
 	</bean>
-	
+
 	<bean name="application16" class="acme.entities.applications.Application">
 		<property name="reference" value="EEEA-JJJE:WWWF" />
 		<property name="moment" value="2019/12/04 01:00" />
@@ -1913,7 +1920,7 @@
 		<property name="worker" ref="worker6Worker" />
 		<property name="job" ref="job5" />
 	</bean>
-	
+
 	<bean name="application17" class="acme.entities.applications.Application">
 		<property name="reference" value="EEED-JJJF:WWWF" />
 		<property name="moment" value="2019/11/27 01:00" />
@@ -1927,7 +1934,7 @@
 		<property name="worker" ref="worker6Worker" />
 		<property name="job" ref="job6" />
 	</bean>
-	
+
 	<bean name="application18" class="acme.entities.applications.Application">
 		<property name="reference" value="EEEB-JJJG:WWWE" />
 		<property name="moment" value="2019/11/29 01:00" />
@@ -1941,7 +1948,7 @@
 		<property name="worker" ref="worker5Worker" />
 		<property name="job" ref="job7" />
 	</bean>
-	
+
 	<bean name="application19" class="acme.entities.applications.Application">
 		<property name="reference" value="EEEB-JJJG:WWWG" />
 		<property name="moment" value="2020/01/09 01:00" />
@@ -1955,7 +1962,7 @@
 		<property name="worker" ref="worker7Worker" />
 		<property name="job" ref="job7" />
 	</bean>
-	
+
 	<bean name="application20" class="acme.entities.applications.Application">
 		<property name="reference" value="EEEA-JJJI:WWWG" />
 		<property name="moment" value="2020/01/05 01:00" />
@@ -1969,7 +1976,7 @@
 		<property name="worker" ref="worker7Worker" />
 		<property name="job" ref="job9" />
 	</bean>
-	
+
 	<bean name="application21" class="acme.entities.applications.Application">
 		<property name="reference" value="EEEA-JJJH:WWWG" />
 		<property name="moment" value="2020/01/07 01:00" />
@@ -1983,7 +1990,7 @@
 		<property name="worker" ref="worker7Worker" />
 		<property name="job" ref="job8" />
 	</bean>
-	
+
 	<bean name="application22" class="acme.entities.applications.Application">
 		<property name="reference" value="EEEA-JJJJ:WWWC" />
 		<property name="moment" value="2019/11/29 01:00" />
@@ -2277,5 +2284,5 @@
 		<property name="user" ref="sponsor1Authenticated" />
 		<property name="thread" ref="thread6" />
 	</bean>
-	
+
 </beans>

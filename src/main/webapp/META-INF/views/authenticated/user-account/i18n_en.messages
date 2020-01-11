@@ -15,6 +15,7 @@ authenticated.user-account.form.label.password = Password:
 authenticated.user-account.form.label.confirmation = Confirmation:
 authenticated.user-account.form.label.name = Name:
 authenticated.user-account.form.label.surname = Surname:
+authenticated.user-account.form.label.phone = Phone:
 authenticated.user-account.form.label.email = Email:
  
 authenticated.user-account.form.button.update = Update
