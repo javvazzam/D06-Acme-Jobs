@@ -22,4 +22,9 @@ public class BannerAdvisor {
 
 		return result;
 	}
+
+	@ModelAttribute("bannerpicture")
+	public String getBannerPicture() {
+		return this.getBanner().getPicture();
+	}
 }
