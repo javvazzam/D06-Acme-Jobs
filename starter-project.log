@@ -173,3 +173,10 @@ org.apache.tiles.request.servlet.ServletUtil.wrapServletException(ServletUtil.ja
 org.apache.jsp.tag.web.print_tag.doTag(print_tag.java:168): org.springframework.core.convert.ConversionFailedException: Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
 org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47): Failed to convert from type [acme.datatypes.Phone] to type [java.lang.String] for value '<<+34 (48) 254254>>'; nested exception is java.util.IllegalFormatConversionException: d != java.lang.String
 java.util.Formatter$FormatSpecifier.failConversion(Unknown Source): d != java.lang.String
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:40): Access is not authorised
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] HTTP GET /acme-jobs/META-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.META_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:373): Parameter value [2019-12-15] did not match expected type [java.util.Date (n/a)]; nested exception is java.lang.IllegalArgumentException: Parameter value [2019-12-15] did not match expected type [java.util.Date (n/a)]
+org.hibernate.query.spi.QueryParameterBindingValidator.validate(QueryParameterBindingValidator.java:54): Parameter value [2019-12-15] did not match expected type [java.util.Date (n/a)]
