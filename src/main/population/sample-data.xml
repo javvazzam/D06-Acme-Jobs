@@ -2290,5 +2290,42 @@
 		<property name="user" ref="sponsor1Authenticated" />
 		<property name="thread" ref="thread6" />
 	</bean>
+	
+	<bean id="banner01" class="acme.entities.banners.Banner">
+		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
+		<property name="slogan" value="Edu Mig" />
+		<property name="url" value="https://www.atptour.com/" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	
+	<bean id="banner02" class="acme.entities.banners.Banner">
+		<property name="picture" value="https://i.imgur.com/NGLSjk6.png" />
+		<property name="slogan" value="Edu Mig" />
+		<property name="url" value="https://www.atptour.com/" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	
+	<bean id="banner03" class="acme.entities.banners.Banner">
+		<property name="picture" value="https://i.imgur.com/2eVF1HG.png" />
+		<property name="slogan" value="Edu Mig" />
+		<property name="url" value="https://www.atptour.com/" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	
+	<bean id="banner04" class="acme.entities.banners.Banner">
+		<property name="picture" value="https://i.imgur.com/fihihcF.png" />
+		<property name="slogan" value="Edu Mig" />
+		<property name="url" value="https://www.atptour.com/" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	
+	<bean id="banner05" class="acme.entities.banners.Banner">
+		<property name="picture" value="https://i.imgur.com/MtBRoNP.png" />
+		<property name="slogan" value="Edu Mig" />
+		<property name="url" value="https://www.atptour.com/" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	
+	
 
 </beans>

@@ -1,8 +1,11 @@
 
 package acme.features.administrator.dashboard;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -118,17 +121,23 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		 * }
 		 */
 
+		ZoneId defaultZoneId = ZoneId.systemDefault();
+
+		LocalDate date = LocalDate.now().minusDays(28);
+		Date moment;
+		moment = Date.from(date.atStartOfDay(defaultZoneId).toInstant());
+
 		// PENDING
-		result.setCountListTimeSeriesPendingApplication(this.repository.getCountTimeSeriesPendingApplication());
-		result.setDateListTimeSeriesPendingApplication(this.repository.getDateTimeSeriesPendingApplication());
+		result.setCountListTimeSeriesPendingApplication(this.repository.getCountTimeSeriesPendingApplication(moment));
+		result.setDateListTimeSeriesPendingApplication(this.repository.getDateTimeSeriesPendingApplication(moment));
 
 		// ACCEPTED
-		result.setCountListTimeSeriesAcceptedApplication(this.repository.getCountTimeSeriesAcceptedApplication());
-		result.setDateListTimeSeriesAcceptedApplication(this.repository.getDateTimeSeriesAcceptedApplication());
+		result.setCountListTimeSeriesAcceptedApplication(this.repository.getCountTimeSeriesAcceptedApplication(moment));
+		result.setDateListTimeSeriesAcceptedApplication(this.repository.getDateTimeSeriesAcceptedApplication(moment));
 
 		// REJECTED
-		result.setCountListTimeSeriesRejectedApplication(this.repository.getCountTimeSeriesRejectedApplication());
-		result.setDateListTimeSeriesRejectedApplication(this.repository.getDateTimeSeriesRejectedApplication());
+		result.setCountListTimeSeriesRejectedApplication(this.repository.getCountTimeSeriesRejectedApplication(moment));
+		result.setDateListTimeSeriesRejectedApplication(this.repository.getDateTimeSeriesRejectedApplication(moment));
 
 		return result;
 	}

@@ -126,6 +126,7 @@ master.footer.label.twitter = Twitter
 master.footer.title.languages = Languages
 master.footer.label.english = English
 master.footer.label.spanish = Spanish
+master.footer.picture.banner = Banner picture
 
 # master.company ##############################################################
 master.company.title = La compañía

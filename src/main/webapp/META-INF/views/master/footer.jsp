@@ -37,3 +37,13 @@
 	</acme:footer-logo>		
 	
 </acme:footer-panel>
+
+
+
+	<acme:form-hidden path="bannerpicture" />	
+	
+	<acme:footer-banner banner="${bannerpicture}">
+		<acme:footer-copyright code="master.footer.picture.banner"/>
+	</acme:footer-banner>
+
+
