@@ -513,7 +513,7 @@
 		<property name="userAccount" ref="employer7UserAccount" />
 	</bean>
 
-	<!-- SPONSOR'S BEANS -->
+	<!-- SPONSOR'S BEANS
 
 	<bean name="sponsor1UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="sponsor1" />
@@ -543,7 +543,7 @@
 	<bean name="sponsor1Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="sponsor1UserAccount" />
 	</bean>
-
+-->
 	<bean name="sponsor2UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="sponsor2" />
 		<property name="password" value="sponsor2" />
@@ -1091,7 +1091,7 @@
 		<property name="stars" value="4.2" />
 	</bean>
 
-	<!-- Commercial Banner's bean -->
+	<!-- Commercial Banner's bean 
 
 	<bean id="commercialBanner01" class="acme.entities.commercialBanners.CommercialBanner">
 		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
@@ -1144,7 +1144,7 @@
 		<property name="sponsor" ref="sponsor4Sponsor" />
 	</bean>
 
-	<!-- Non-commercial Banner's bean -->
+	 Non-commercial Banner's bean 
 
 	<bean id="nonCommercialBanner01" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
 		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
@@ -1190,14 +1190,7 @@
 		<property name="sponsor" ref="sponsor4Sponsor" />
 	</bean>
 
-	<!-- <bean id="nonCommercialBanner06" class="acme.entities.nonCommercialBanners.NonCommercialBanner"> <property name="picture" value="http://otroejemplo.jpg" 
-		/> <property name="slogan" value="Repeticion3!" /> <property name="url" value="https://ejemplos.com" /> <property name="jingle"> <null 
-		/> </property> <property name="sponsor" ref="sponsor4Sponsor" /> </bean> <bean id="nonCommercialBanner07" class="acme.entities.nonCommercialBanners.NonCommercialBanner"> 
-		<property name="picture" value="http://estamosañadiendodatosparaiterar.jpg" /> <property name="slogan" value="Repeticion4!" /> <property 
-		name="url" value="https://yesteesotrodatomas.com" /> <property name="jingle"> <null /> </property> <property name="sponsor" ref="sponsor4Sponsor" 
-		/> </bean> -->
-
-	<!-- Auditors -->
+	Auditors -->
 	<bean name="auditor1UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="auditor1" />
 		<property name="password" value="auditor1" />
@@ -2291,6 +2284,7 @@
 		<property name="thread" ref="thread6" />
 	</bean>
 	
+	<!-- 
 	<bean id="banner01" class="acme.entities.banners.Banner">
 		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
 		<property name="slogan" value="Edu Mig" />
@@ -2325,7 +2319,7 @@
 		<property name="url" value="https://www.atptour.com/" />
 		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
-	
+	 -->
 	
 
 </beans>

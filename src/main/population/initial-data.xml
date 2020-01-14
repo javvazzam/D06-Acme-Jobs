@@ -81,4 +81,170 @@
 		<property name="threshold" value="1.0"/>
 	</bean>
 	
+	<!-- Sponsor -->
+	
+		<bean name="sponsor1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor1" />
+		<property name="password" value="sponsor1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Sponsor" />
+				<property name="surname" value="One" />
+				<property name="email" value="sponsor1@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsor1Sponsor" />
+				<ref bean="sponsor1Authenticated" />
+			</list>
+		</property>
+	</bean>
+
+	<bean name="sponsor1Sponsor" class="acme.entities.roles.Sponsor">
+		<property name="organization" value="Acme organization 1" />
+		<property name="creditCard" value="4111111111111111" />
+		<property name="userAccount" ref="sponsor1UserAccount" />
+	</bean>
+
+	<bean name="sponsor1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsor1UserAccount" />
+	</bean>
+	
+		<!-- Commercial Banner's bean -->
+
+	<bean id="commercialBanner01" class="acme.entities.commercialBanners.CommercialBanner">
+		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
+		<property name="slogan" value="Edu Mig" />
+		<property name="url" value="https://www.atptour.com/" />
+		<property name="creditCard" value="4111111111111111" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	<bean id="commercialBanner02" class="acme.entities.commercialBanners.CommercialBanner">
+		<property name="picture"
+			value="https://i.imgur.com/2eVF1HG.png" />
+		<property name="slogan" value="The autum in Spain " />
+		<property name="url" value="https://i.imgur.com/2eVF1HG.png" />
+		<property name="creditCard" value="4111111111111111" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	<bean id="commercialBanner03" class="acme.entities.commercialBanners.CommercialBanner">
+		<property name="picture" value="https://i.imgur.com/MtBRoNP.png" />
+		<property name="slogan" value="Work as anyone" />
+		<property name="url" value="https://www.atptour.com/" />
+		<property name="creditCard" value="4111111111111111" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	<bean id="commercialBanner04" class="acme.entities.commercialBanners.CommercialBanner">
+		<property name="picture" value="https://i.imgur.com/NGLSjk6.png" />
+		<property name="slogan" value="repeticion1!" />
+		<property name="url" value="https://estosondatosparaiterar.com/" />
+		<property name="creditCard" value="4111111111111111" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	<bean id="commercialBanner05" class="acme.entities.commercialBanners.CommercialBanner">
+		<property name="picture" value="https://i.imgur.com/fihihcF.png" />
+		<property name="slogan" value="repeticion2!" />
+		<property name="url" value="https://www.atptour.com/" />
+		<property name="creditCard" value="5500000000000004" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	<bean id="commercialBanner06" class="acme.entities.commercialBanners.CommercialBanner">
+		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
+		<property name="slogan" value="repeticion3!" />
+		<property name="url" value="https://www.atptour.com/" />
+		<property name="creditCard" value="5500000000000004" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	<bean id="commercialBanner07" class="acme.entities.commercialBanners.CommercialBanner">
+		<property name="picture" value="https://i.imgur.com/2eVF1HG.png" />
+		<property name="slogan" value="repeticion4!" />
+		<property name="url" value="https://www.atptour.com/" />
+		<property name="creditCard" value="5500000000000004" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+
+	<!-- Non-commercial Banner's bean -->
+
+	<bean id="nonCommercialBanner01" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
+		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
+		<property name="slogan" value="Slogan 1" />
+		<property name="url" value="https://i.imgur.com/8YcXhS0.png" />
+		<property name="jingle" value="https://i.imgur.com/8YcXhS0.png" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	<bean id="nonCommercialBanner02" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
+		<property name="picture" value="https://i.imgur.com/2eVF1HG.png" />
+		<property name="slogan" value="Slogan 2" />
+		<property name="url" value="https://i.imgur.com/2eVF1HG.png" />
+		<property name="jingle">
+			<null />
+		</property>
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	<bean id="nonCommercialBanner03" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
+		<property name="picture" value="https://i.imgur.com/MtBRoNP.png" />
+		<property name="slogan" value="Slogan 3" />
+		<property name="url" value="https://i.imgur.com/MtBRoNP.png" />
+		<property name="jingle">
+			<null />
+		</property>
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	<bean id="nonCommercialBanner04" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
+		<property name="picture" value="https://i.imgur.com/NGLSjk6.png" />
+		<property name="slogan" value="Slogan 4" />
+		<property name="url" value="https://i.imgur.com/NGLSjk6.png" />
+		<property name="jingle">
+			<null />
+		</property>
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	<bean id="nonCommercialBanner05" class="acme.entities.nonCommercialBanners.NonCommercialBanner">
+		<property name="picture" value="https://i.imgur.com/fihihcF.png" />
+		<property name="slogan" value="Slogan 5" />
+		<property name="url" value="https://i.imgur.com/fihihcF.png" />
+		<property name="jingle">
+			<null />
+		</property>
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+
+	
+	<bean id="banner01" class="acme.entities.banners.Banner">
+		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
+		<property name="slogan" value="Edu Mig" />
+		<property name="url" value="https://www.atptour.com/" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	
+	<bean id="banner02" class="acme.entities.banners.Banner">
+		<property name="picture" value="https://i.imgur.com/NGLSjk6.png" />
+		<property name="slogan" value="Edu Mig" />
+		<property name="url" value="https://www.atptour.com/" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	
+	<bean id="banner03" class="acme.entities.banners.Banner">
+		<property name="picture" value="https://i.imgur.com/2eVF1HG.png" />
+		<property name="slogan" value="Edu Mig" />
+		<property name="url" value="https://www.atptour.com/" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	
+	<bean id="banner04" class="acme.entities.banners.Banner">
+		<property name="picture" value="https://i.imgur.com/fihihcF.png" />
+		<property name="slogan" value="Edu Mig" />
+		<property name="url" value="https://www.atptour.com/" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	
+	<bean id="banner05" class="acme.entities.banners.Banner">
+		<property name="picture" value="https://i.imgur.com/MtBRoNP.png" />
+		<property name="slogan" value="Edu Mig" />
+		<property name="url" value="https://www.atptour.com/" />
+		<property name="sponsor" ref="sponsor1Sponsor" />
+	</bean>
+	
 </beans>
