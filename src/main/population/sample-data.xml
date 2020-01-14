@@ -1094,7 +1094,7 @@
 	<!-- Commercial Banner's bean -->
 
 	<bean id="commercialBanner01" class="acme.entities.commercialBanners.CommercialBanner">
-		<property name="picture" value="http://piezaapieza.net/wp-content/uploads/2016/11/EDU84131.01.jpg" />
+		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
 		<property name="slogan" value="Edu Mig" />
 		<property name="url" value="https://www.atptour.com/" />
 		<property name="creditCard" value="4111111111111111" />
@@ -1102,42 +1102,42 @@
 	</bean>
 	<bean id="commercialBanner02" class="acme.entities.commercialBanners.CommercialBanner">
 		<property name="picture"
-			value="https://s3.eestatic.com/2019/09/23/ciencia/Otono-Ciencia_431466954_134482819_1024x576.jpg" />
+			value="https://i.imgur.com/2eVF1HG.png" />
 		<property name="slogan" value="The autum in Spain " />
-		<property name="url" value="https://www.elperiodico.com/es/sociedad/20190918/otono-2019-equinoccio-dia-hora-7639468" />
+		<property name="url" value="https://i.imgur.com/2eVF1HG.png" />
 		<property name="creditCard" value="4111111111111111" />
 		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
 	<bean id="commercialBanner03" class="acme.entities.commercialBanners.CommercialBanner">
-		<property name="picture" value="http://piezaapieza.net/wp-content/uploads/2016/11/EDU84131.01.jpg" />
+		<property name="picture" value="https://i.imgur.com/MtBRoNP.png" />
 		<property name="slogan" value="Work as anyone" />
 		<property name="url" value="https://www.atptour.com/" />
 		<property name="creditCard" value="4111111111111111" />
 		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
 	<bean id="commercialBanner04" class="acme.entities.commercialBanners.CommercialBanner">
-		<property name="picture" value="http://datos.jpg" />
+		<property name="picture" value="https://i.imgur.com/NGLSjk6.png" />
 		<property name="slogan" value="repeticion1!" />
 		<property name="url" value="https://estosondatosparaiterar.com/" />
 		<property name="creditCard" value="4111111111111111" />
 		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
 	<bean id="commercialBanner05" class="acme.entities.commercialBanners.CommercialBanner">
-		<property name="picture" value="http://piezaapieza.net/wp-content/uploads/2016/11/EDU84131.01.jpg" />
+		<property name="picture" value="https://i.imgur.com/fihihcF.png" />
 		<property name="slogan" value="repeticion2!" />
 		<property name="url" value="https://www.atptour.com/" />
 		<property name="creditCard" value="5500000000000004" />
 		<property name="sponsor" ref="sponsor4Sponsor" />
 	</bean>
 	<bean id="commercialBanner06" class="acme.entities.commercialBanners.CommercialBanner">
-		<property name="picture" value="http://piezaapieza.net/wp-content/uploads/2016/11/EDU84131.01.jpg" />
+		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
 		<property name="slogan" value="repeticion3!" />
 		<property name="url" value="https://www.atptour.com/" />
 		<property name="creditCard" value="5500000000000004" />
 		<property name="sponsor" ref="sponsor4Sponsor" />
 	</bean>
 	<bean id="commercialBanner07" class="acme.entities.commercialBanners.CommercialBanner">
-		<property name="picture" value="http://piezaapieza.net/wp-content/uploads/2016/11/EDU84131.01.jpg" />
+		<property name="picture" value="https://i.imgur.com/2eVF1HG.png" />
 		<property name="slogan" value="repeticion4!" />
 		<property name="url" value="https://www.atptour.com/" />
 		<property name="creditCard" value="5500000000000004" />
