@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--
-- initial-data.xml
--
-- Copyright (c) 2019 Rafael Corchuelo.
--
-- In keeping with the traditional purpose of furthering education and research, it is
-- the policy of the copyright owner to permit non-commercial use and redistribution of
-- this software. It has been tested carefully, but it is not guaranteed for any particular
-- purposes.  The copyright owner does not offer any warranties or representations, nor do
-- they accept any liabilities with respect to them.
--->
+<!-- - initial-data.xml - - Copyright (c) 2019 Rafael Corchuelo. - - In keeping with the traditional purpose of furthering education 
+	and research, it is - the policy of the copyright owner to permit non-commercial use and redistribution of - this software. It has been 
+	tested carefully, but it is not guaranteed for any particular - purposes. The copyright owner does not offer any warranties or representations, 
+	nor do - they accept any liabilities with respect to them. -->
 
-<beans 
-	xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
->
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<import resource="conversion-service.xml"/>
-	
+	<import resource="conversion-service.xml" />
+
 	<!-- Anonymous user -->
 
 	<bean name="anonymousUserAccount" class="acme.framework.entities.UserAccount">
@@ -45,7 +35,7 @@
 	</bean>
 
 	<!-- Administrators -->
-	
+
 	<bean name="administratorUserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="administrator" />
 		<property name="password" value="administrator" />
@@ -55,6 +45,7 @@
 				<property name="name" value="Administrator" />
 				<property name="surname" value="Acme.com" />
 				<property name="email" value="administrator@acme.com" />
+
 			</bean>
 		</property>
 		<property name="roles">
@@ -68,22 +59,23 @@
 	<bean name="administratorAdministrator" class="acme.framework.entities.Administrator">
 		<property name="userAccount" ref="administratorUserAccount" />
 	</bean>
-	
+
 	<bean name="administratorAuthenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="administratorUserAccount" />
 	</bean>
-	
-<!-- Spam's beans-->
+
+	<!-- Spam's beans -->
 
 	<bean id="customization01" class="acme.entities.customization.Customization">
-		<property name="spam" value="sex,hardcore,viagra,cialis,nigeria,you've won,million dollar,
-		sexo,duro,viagra,cialis,nigeria,has ganado,millón de euros"/>
-		<property name="threshold" value="1.0"/>
+		<property name="spam"
+			value="sex,hardcore,viagra,cialis,nigeria,you've won,million dollar,
+		sexo,duro,viagra,cialis,nigeria,has ganado,millón de euros" />
+		<property name="threshold" value="1.0" />
 	</bean>
-	
+
 	<!-- Sponsor -->
-	
-		<bean name="sponsor1UserAccount" class="acme.framework.entities.UserAccount">
+
+	<bean name="sponsor1UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="sponsor1" />
 		<property name="password" value="sponsor1" />
 		<property name="enabled" value="true" />
@@ -92,6 +84,7 @@
 				<property name="name" value="Sponsor" />
 				<property name="surname" value="One" />
 				<property name="email" value="sponsor1@acme.com" />
+				<property name="phone" value="+34 123 456 789" />
 			</bean>
 		</property>
 		<property name="roles">
@@ -111,8 +104,8 @@
 	<bean name="sponsor1Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="sponsor1UserAccount" />
 	</bean>
-	
-		<!-- Commercial Banner's bean -->
+
+	<!-- Commercial Banner's bean -->
 
 	<bean id="commercialBanner01" class="acme.entities.commercialBanners.CommercialBanner">
 		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
@@ -122,8 +115,7 @@
 		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
 	<bean id="commercialBanner02" class="acme.entities.commercialBanners.CommercialBanner">
-		<property name="picture"
-			value="https://i.imgur.com/2eVF1HG.png" />
+		<property name="picture" value="https://i.imgur.com/2eVF1HG.png" />
 		<property name="slogan" value="The autum in Spain " />
 		<property name="url" value="https://i.imgur.com/2eVF1HG.png" />
 		<property name="creditCard" value="4111111111111111" />
@@ -211,40 +203,40 @@
 		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
 
-	
+
 	<bean id="banner01" class="acme.entities.banners.Banner">
 		<property name="picture" value="https://i.imgur.com/8YcXhS0.png" />
 		<property name="slogan" value="Edu Mig" />
 		<property name="url" value="https://www.atptour.com/" />
 		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
-	
+
 	<bean id="banner02" class="acme.entities.banners.Banner">
 		<property name="picture" value="https://i.imgur.com/NGLSjk6.png" />
 		<property name="slogan" value="Edu Mig" />
 		<property name="url" value="https://www.atptour.com/" />
 		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
-	
+
 	<bean id="banner03" class="acme.entities.banners.Banner">
 		<property name="picture" value="https://i.imgur.com/2eVF1HG.png" />
 		<property name="slogan" value="Edu Mig" />
 		<property name="url" value="https://www.atptour.com/" />
 		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
-	
+
 	<bean id="banner04" class="acme.entities.banners.Banner">
 		<property name="picture" value="https://i.imgur.com/fihihcF.png" />
 		<property name="slogan" value="Edu Mig" />
 		<property name="url" value="https://www.atptour.com/" />
 		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
-	
+
 	<bean id="banner05" class="acme.entities.banners.Banner">
 		<property name="picture" value="https://i.imgur.com/MtBRoNP.png" />
 		<property name="slogan" value="Edu Mig" />
 		<property name="url" value="https://www.atptour.com/" />
 		<property name="sponsor" ref="sponsor1Sponsor" />
 	</bean>
-	
+
 </beans>

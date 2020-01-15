@@ -42,7 +42,7 @@ public class Phone extends DomainDatatype {
 	private String				areaCode;
 
 	@NotBlank
-	@Pattern(regexp = "\\d{1,9}([\\s-]\\d{1,9}{0,5})", message = "default.error.conversion")
+	@Pattern(regexp = "\\d{1,9}([\\s-]\\d{1,9}){0,5}", message = "default.error.conversion")
 	private String				number;
 
 	// Derived attributes -----------------------------------------------------

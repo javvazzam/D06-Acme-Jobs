@@ -2198,7 +2198,7 @@
 			<null />
 		</property>
 		<property name="body" value="Message16" />
-		<property name="user" ref="sponsor1Authenticated" />
+		<property name="user" ref="sponsor3Authenticated" />
 		<property name="thread" ref="thread6" />
 	</bean>
 
@@ -2280,7 +2280,7 @@
 	</bean>
 
 	<bean name="participant16" class="acme.entities.participants.Participant">
-		<property name="user" ref="sponsor1Authenticated" />
+		<property name="user" ref="sponsor4Authenticated" />
 		<property name="thread" ref="thread6" />
 	</bean>
 	
